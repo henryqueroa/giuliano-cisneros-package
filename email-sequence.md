@@ -1,6 +1,6 @@
 # Secuencia de outreach. Giuliano Cisneros / Haztuagencia
 
-Diez emails (también funcionan como DMs adaptados) en español, voz Zytrom, dirigidos a Giuliano. Reemplazar `[HUB_PAGE_URL]`, `[CALENDLY_URL]` y `[LOOM_URL]` antes de enviar.
+Diez emails (también funcionan como DMs adaptados) en español, voz Zytrom, dirigidos a Giuliano. El link al hub ya está en vivo. Reemplazar `[LOOM_URL]` con el Loom grabado antes de enviar.
 
 **Notas:**
 - Sin guion largo (em-dash). Coma o punto.
@@ -16,9 +16,9 @@ Diez emails (también funcionan como DMs adaptados) en español, voz Zytrom, dir
 
 Hola Giuliano,
 
-Soy Henryque, fundador de Zytrom. Llevo unos días estudiando lo que estás haciendo con Haztuagencia y armé un paquete específico para ti. Investigación, ángulos de campaña, scripts de ads, una landing page completa y un outline de VSL.
+Soy Henryque, fundador de Zytrom. Llevo unos días estudiando lo que estás haciendo con Haztuagencia y armé un paquete específico para ti. Investigación, ángulos de campaña, scripts de ads, dos funnels en vivo (tu página de VSL y un funnel de webinar completo) y un outline de VSL.
 
-Todo está aquí: [HUB_PAGE_URL]
+Todo está aquí: https://henryqueroa.github.io/giuliano-cisneros-package/
 
 No tienes que registrarte ni dar tu email. Es tuyo lo veas o no. Si te sirve algo, úsalo. Si no, te queda en archivo.
 
@@ -34,11 +34,11 @@ Henryque
 
 Giuliano,
 
-Después de revisar haztuagencia.com encontré algo que probablemente te suena. Tu sitio entero es un opt-in al webinar. El que no quiere ver una hora de video, se va frío. No hay sales page, no hay testimonios visibles, no hay segunda puerta.
+Después de revisar haztuagencia.com encontré algo que probablemente te suena. Tu sitio entero es un opt-in al VSL. El que no quiere ver el video completo, se va frío. No hay sales page que pre-venda, no hay testimonios visibles, no hay segunda puerta.
 
-El Pixel de Facebook está cargado, lo que me dice que ya estás corriendo ads. Cada visitante que no se registra cuesta dinero real.
+El Pixel de Facebook está cargado, lo que me dice que ya estás corriendo ads. Cada visitante que no deja su correo cuesta dinero real.
 
-En el paquete que te mandé hay una sales page paralela construida para capturar a ese tráfico. La puedes ver aquí: [HUB_PAGE_URL]
+En el paquete que te mandé hay una sales page paralela construida para capturar a ese tráfico. La puedes ver aquí: https://henryqueroa.github.io/giuliano-cisneros-package/
 
 Si te tiene sentido, hablamos.
 
@@ -52,11 +52,11 @@ Henryque
 
 Giuliano,
 
-Trabajé con un coach que enseña sales en español. Su funnel era similar al tuyo. Webinar evergreen, pixel cargado, sin sales page paralela. En 6 semanas montamos la página, productizamos 8 case studies y armamos un nurture de 7 emails post-webinar.
+Trabajé con un coach que enseña sales en español. Su funnel era similar al tuyo. VSL evergreen, pixel cargado, sin sales page paralela. En 6 semanas montamos la página, productizamos 8 case studies y armamos un nurture de 7 emails de seguimiento.
 
-Conversión total al programa subió 38%. Los emails post-webinar generaron el 41% de las ventas. La inversión se pagó en menos de 30 días.
+Conversión total al programa subió 38%. Los emails de seguimiento generaron el 41% de las ventas. La inversión se pagó en menos de 30 días.
 
-Tu caso es parecido en estructura. Mismo tipo de funnel, misma audiencia con dolor identitario. El paquete que te armé está aquí: [HUB_PAGE_URL]
+Tu caso es parecido en estructura. Mismo tipo de funnel, misma audiencia con dolor identitario. El paquete que te armé está aquí: https://henryqueroa.github.io/giuliano-cisneros-package/
 
 Henryque
 
@@ -64,20 +64,20 @@ Henryque
 
 ## Email 4 - Día 8. Tactic-Only Value
 
-**Asunto:** Un truco rápido para el post-webinar
+**Asunto:** Un truco rápido para el seguimiento del VSL
 
 Giuliano,
 
 Una táctica concreta que puedes aplicar mañana sin contratar a nadie.
 
-Después del webinar, los 3 emails que mejor convierten en este nicho son estos:
+Después de que alguien ve tu VSL, los 3 emails que mejor convierten en este nicho son estos:
 1. Email del replay con un resumen de los 3 puntos clave (no solo el link)
 2. Caso de estudio específico del alumno más parecido al lector
 3. Email de objeción de precio escrito como si fuera respondiendo a un mensaje real
 
 Esos 3 emails, en ese orden, suelen generar entre 30% y 50% del revenue del funnel. La mayoría de coaches mete solo "te dejo el link" y pierde la venta.
 
-Si quieres ver el paquete completo: [HUB_PAGE_URL]
+Si quieres ver el paquete completo: https://henryqueroa.github.io/giuliano-cisneros-package/
 
 Henryque
 
@@ -91,11 +91,11 @@ Giuliano,
 
 ¿Tienes 15 minutos esta semana?
 
-Te mandé el paquete hace unos días. Si lo viste, te quería preguntar dos cosas. Una, si lo que armé tiene sentido para tu modelo. Dos, si te ayudaría tener a alguien construyendo el resto (sales page en vivo, productización de case studies, nurture post-webinar y secuencia de retargeting).
+Te mandé el paquete hace unos días. Si lo viste, te quería preguntar dos cosas. Una, si lo que armé tiene sentido para tu modelo. Dos, si te ayudaría tener a alguien construyendo el resto (sales page en vivo, productización de case studies, el funnel de webinar completo y secuencia de retargeting).
 
 Si la respuesta es sí a la segunda, agendamos. Si es no, todo bien, te quedan los entregables.
 
-Mi calendario: [CALENDLY_URL]
+Mi calendario: https://calendly.com/henryque-zytrom/30min
 
 Henryque
 
@@ -107,13 +107,13 @@ Henryque
 
 Giuliano,
 
-Pensé en algo más después de revisar tu contenido en TikTok. Tienes 636K seguidores y la mayoría del tráfico viene de ahí. Pero el funnel solo tiene una puerta. Webinar o nada.
+Pensé en algo más después de revisar tu contenido en TikTok. Tienes 636K seguidores y la mayoría del tráfico viene de ahí. Pero el funnel solo tiene una puerta. El VSL o nada.
 
-Una idea que mueve la aguja sin tocar el webinar: un mini lead magnet de TikTok directo, tipo "Checklist: los 7 servicios mejor pagados en 2026". Captura email, lo metes en una secuencia corta y los empujas al webinar después de 3 emails.
+Una idea que mueve la aguja sin tocar tu VSL: un funnel de webinar paralelo. El VSL convierte al que ya está caliente. El webinar capta al que está tibio, el que necesita una hora de valor y prueba antes de aplicar. En el paquete ya te dejé la página de registro, el guion completo y los emails listos.
 
-Eso convierte al tráfico de TikTok que no está listo para una hora de video pero sí está listo para un PDF de 4 minutos.
+Eso convierte al tráfico de TikTok que todavía no está listo para aplicar pero sí está listo para registrarse a algo gratis con fecha.
 
-El paquete completo sigue aquí: [HUB_PAGE_URL]
+El paquete completo sigue aquí: https://henryqueroa.github.io/giuliano-cisneros-package/
 
 Henryque
 
@@ -131,7 +131,7 @@ Lo que movió la aguja no fue ads. Fue arreglar el funnel de email. Bienvenida d
 
 Su trabajo era casi idéntico al tuyo en estructura. Educa, vende mentoría high-ticket, audiencia de habla hispana.
 
-Si quieres revisar el paquete completo: [HUB_PAGE_URL]
+Si quieres revisar el paquete completo: https://henryqueroa.github.io/giuliano-cisneros-package/
 
 Henryque
 
@@ -145,7 +145,7 @@ Giuliano,
 
 Quería saber si pudiste echarle un ojo al paquete que armé.
 
-[HUB_PAGE_URL]
+https://henryqueroa.github.io/giuliano-cisneros-package/
 
 Si lo viste y no es para ti, sin problema. Solo dime y dejo de escribir. Si lo viste y tienes feedback, también lo recibo.
 
@@ -161,7 +161,7 @@ Giuliano,
 
 Solo para cerrar el loop. El paquete que armé sigue en línea, es tuyo lo uses o no. No te voy a seguir escribiendo después de esta.
 
-Si en algún momento decides que tiene sentido construir el resto juntos, mi calendario sigue abierto: [CALENDLY_URL]
+Si en algún momento decides que tiene sentido construir el resto juntos, mi calendario sigue abierto: https://calendly.com/henryque-zytrom/30min
 
 Si no, todo bien. Sigue cerrando latinos. Es trabajo importante.
 
@@ -190,5 +190,5 @@ Henryque
 - **Cadencia:** Días 1, 3, 5, 8, 11, 15, 19, 24, 30, 37 (37 días total)
 - **Canal primario:** Instagram DM (`@guiliano.c`) si no conseguimos email
 - **Adaptación a DM:** Cortar todos los emails al 50% si va por DM, mantener el primer párrafo y CTA
-- **Tracking:** UTM en cada link de [HUB_PAGE_URL] para medir apertura del paquete
+- **Tracking:** UTM en cada link de https://henryqueroa.github.io/giuliano-cisneros-package/ para medir apertura del paquete
 - **Personalización antes de enviar:** Revisar TikTok de Giuliano el día antes de cada envío. Si subió contenido relevante, hacer referencia natural en el email del día.

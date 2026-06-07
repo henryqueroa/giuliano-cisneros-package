@@ -4,779 +4,427 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Haztuagencia | Cierra tu primer cliente en 30 a 90 días</title>
-    <meta name="description" content="El modelo que usa Giuliano Cisneros para facturar $70K al mes vendiendo servicios a negocios. Más de 300 latinos en USA ya lo aplicaron.">
+    <meta name="description" content="El modelo que usa Giuliano Cisneros para facturar $70K al mes vendiendo servicios a negocios. Mira el entrenamiento gratis y aplica para una llamada.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
-            --bg: #0A0F1A;
-            --bg-2: #111827;
-            --surface: #161E2A;
-            --border: rgba(255, 255, 255, 0.08);
-            --border-hover: rgba(46, 145, 252, 0.4);
+            --dark: #0A0F1A;
+            --surface: #111827;
+            --card: #161E2A;
             --blue: #2E91FC;
             --blue-dark: #1F7AD9;
-            --blue-glow: rgba(46, 145, 252, 0.15);
+            --blue-soft: rgba(46, 145, 252, 0.1);
             --white: #ffffff;
-            --gray: #94A3B8;
-            --gray-light: #CBD5E1;
-            --gray-dark: #475569;
+            --gray-300: #cbd5e1;
+            --gray-400: #94a3b8;
+            --gray-600: #475569;
+            --red-soft: rgba(255, 80, 80, 0.1);
+            --red-border: rgba(255, 80, 80, 0.3);
         }
 
         html { scroll-behavior: smooth; }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
             color: var(--white);
-            background: var(--bg);
-            line-height: 1.65;
+            background: var(--dark);
+            line-height: 1.6;
             -webkit-font-smoothing: antialiased;
             overflow-x: hidden;
         }
 
-        body::before {
-            content: '';
+        .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+        /* ========== NAVBAR ========== */
+        .navbar {
             position: fixed;
-            inset: 0;
-            background:
-                radial-gradient(ellipse at 10% 0%, rgba(46, 145, 252, 0.12) 0%, transparent 50%),
-                radial-gradient(ellipse at 90% 100%, rgba(46, 145, 252, 0.06) 0%, transparent 50%);
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 2; }
-        .container-narrow { max-width: 860px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 2; }
-
-        h1, h2, h3 { letter-spacing: -0.02em; line-height: 1.1; font-weight: 800; }
-        h2 { font-size: clamp(28px, 4vw, 42px); margin-bottom: 16px; }
-        h3 { font-size: clamp(20px, 2.5vw, 26px); margin-bottom: 12px; }
-        p { color: var(--gray-light); }
-
-        a { color: inherit; text-decoration: none; }
-
-        .btn {
-            display: inline-block;
-            padding: 16px 32px;
-            background: var(--blue);
-            color: var(--white);
-            font-size: 15px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border-radius: 6px;
-            border: none;
-            cursor: pointer;
-            transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
-            box-shadow: 0 8px 28px rgba(46, 145, 252, 0.3);
-        }
-        .btn:hover { background: var(--blue-dark); transform: translateY(-2px); box-shadow: 0 12px 32px rgba(46, 145, 252, 0.45); }
-        .btn-secondary {
-            background: transparent;
-            border: 2px solid var(--blue);
-            box-shadow: none;
-        }
-        .btn-secondary:hover { background: var(--blue-glow); transform: translateY(-2px); }
-
-        .eyebrow {
-            display: inline-block;
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 2.5px;
-            text-transform: uppercase;
-            color: var(--blue);
-            margin-bottom: 16px;
-        }
-
-        /* ========== NAV ========== */
-        .nav {
-            position: sticky;
-            top: 0;
-            background: rgba(10, 15, 26, 0.85);
+            top: 0; left: 0; right: 0;
+            z-index: 100;
+            background: rgba(10, 15, 26, 0.9);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border);
-            z-index: 100;
-            padding: 16px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+            padding: 14px 0;
         }
-        .nav-inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .nav-logo {
-            font-size: 18px;
-            font-weight: 900;
-            letter-spacing: 1px;
-            color: var(--white);
-        }
-        .nav-logo span { color: var(--blue); }
+        .navbar .container { display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo .logo-text { font-size: 20px; font-weight: 800; color: var(--white); letter-spacing: -0.5px; }
+        .nav-logo .logo-text span { color: var(--blue); }
         .nav-cta {
-            display: inline-block;
-            padding: 10px 20px;
             background: var(--blue);
             color: var(--white);
-            font-size: 13px;
+            padding: 10px 24px;
+            border-radius: 8px;
+            text-decoration: none;
             font-weight: 700;
-            border-radius: 6px;
-            letter-spacing: 0.5px;
-            transition: background 0.2s ease;
+            font-size: 14px;
+            transition: background 0.2s, transform 0.2s;
         }
-        .nav-cta:hover { background: var(--blue-dark); }
+        .nav-cta:hover { background: var(--blue-dark); transform: translateY(-1px); }
 
         /* ========== HERO ========== */
         .hero {
-            padding: 80px 0 64px;
+            padding: 96px 0 36px;
             text-align: center;
             position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 50%;
+            transform: translateX(-50%);
+            width: 800px; height: 800px;
+            background: radial-gradient(circle, rgba(46, 145, 252, 0.08) 0%, transparent 70%);
+            pointer-events: none;
         }
         .hero-badge {
             display: inline-block;
-            background: var(--blue-glow);
-            border: 1px solid rgba(46, 145, 252, 0.3);
+            background: var(--blue-soft);
+            border: 1px solid rgba(46, 145, 252, 0.25);
             color: var(--blue);
-            padding: 8px 18px;
+            padding: 7px 18px;
             border-radius: 100px;
             font-size: 12px;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 24px;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
         }
         .hero h1 {
-            font-size: clamp(36px, 6vw, 64px);
-            font-weight: 900;
+            font-size: clamp(28px, 4.4vw, 48px);
+            font-weight: 800;
+            line-height: 1.12;
             letter-spacing: -1.5px;
-            margin-bottom: 24px;
+            margin: 0 auto 14px;
+            max-width: 880px;
         }
-        .hero h1 span { color: var(--blue); }
-        .hero p.lede {
-            font-size: clamp(17px, 2vw, 20px);
-            color: var(--gray-light);
-            max-width: 700px;
-            margin: 0 auto 36px;
+        .hero h1 .highlight { color: var(--blue); }
+        .hero p.sub {
+            font-size: clamp(15px, 1.6vw, 18px);
+            color: var(--gray-300);
+            max-width: 620px;
+            margin: 0 auto 18px;
             line-height: 1.6;
-        }
-        .hero-cta-row {
-            display: flex;
-            gap: 16px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 32px;
         }
         .hero-trust {
             display: flex;
             justify-content: center;
-            gap: 32px;
             flex-wrap: wrap;
-            font-size: 13px;
-            color: var(--gray);
-            margin-top: 16px;
+            gap: 10px;
+            margin: 0 auto 24px;
         }
-        .hero-trust strong { color: var(--white); font-weight: 700; }
-
-        /* ========== STATS STRIP ========== */
-        .stats-strip {
-            padding: 48px 0;
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-            background: rgba(255, 255, 255, 0.015);
-        }
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 32px;
-            text-align: center;
-        }
-        .stat-number {
-            font-size: clamp(28px, 4vw, 44px);
-            font-weight: 900;
-            color: var(--blue);
-            line-height: 1;
-            margin-bottom: 8px;
-        }
-        .stat-label {
-            font-size: 13px;
-            color: var(--gray);
-            text-transform: uppercase;
-            letter-spacing: 1px;
+        .hero-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            background: var(--blue-soft);
+            border: 1px solid rgba(46, 145, 252, 0.2);
+            color: var(--gray-300);
+            padding: 7px 14px;
+            border-radius: 100px;
+            font-size: 12px;
             font-weight: 600;
-        }
-
-        /* ========== SECTION ========== */
-        section.block {
-            padding: 96px 0;
-        }
-        section.block.alt {
-            background: rgba(255, 255, 255, 0.015);
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-        }
-        .section-header { text-align: center; margin-bottom: 56px; }
-        .section-header h2 span { color: var(--blue); }
-        .section-header p {
-            max-width: 640px;
-            margin: 16px auto 0;
-            font-size: 17px;
-        }
-
-        /* ========== PROBLEM ========== */
-        .problem-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-        .problem-card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 32px 28px;
-            transition: border-color 0.3s ease, transform 0.3s ease;
-        }
-        .problem-card:hover { border-color: var(--border-hover); transform: translateY(-4px); }
-        .problem-card .icon {
-            width: 44px;
-            height: 44px;
-            background: var(--blue-glow);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 22px;
-            margin-bottom: 20px;
-            color: var(--blue);
-            font-weight: 900;
-        }
-        .problem-card h3 { font-size: 18px; margin-bottom: 10px; }
-        .problem-card p { font-size: 15px; }
-
-        /* ========== MECHANISM ========== */
-        .mechanism-wrap {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 64px;
-            align-items: center;
-        }
-        .mechanism-text h2 { text-align: left; margin-bottom: 24px; }
-        .mechanism-text p { margin-bottom: 16px; font-size: 16px; }
-        .mechanism-steps {
-            list-style: none;
-            counter-reset: steps;
-            margin-top: 24px;
-        }
-        .mechanism-steps li {
-            counter-increment: steps;
-            padding: 16px 0 16px 60px;
-            position: relative;
-            border-bottom: 1px solid var(--border);
-            font-size: 16px;
-            color: var(--gray-light);
-        }
-        .mechanism-steps li:last-child { border-bottom: none; }
-        .mechanism-steps li::before {
-            content: counter(steps);
-            position: absolute;
-            left: 0;
-            top: 14px;
-            width: 40px;
-            height: 40px;
-            background: var(--blue-glow);
-            color: var(--blue);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 800;
-            font-size: 16px;
-        }
-        .mechanism-visual {
-            background: linear-gradient(135deg, var(--surface) 0%, var(--bg-2) 100%);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 48px 32px;
-            text-align: center;
-        }
-        .mechanism-visual .big {
-            font-size: clamp(48px, 8vw, 96px);
-            font-weight: 900;
-            color: var(--blue);
-            line-height: 1;
-            letter-spacing: -3px;
-            margin-bottom: 12px;
-        }
-        .mechanism-visual .label {
-            font-size: 14px;
-            color: var(--gray);
             text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 32px;
+            letter-spacing: 0.5px;
         }
-        .mechanism-visual .sub {
-            font-size: 16px;
-            color: var(--gray-light);
-            line-height: 1.6;
-        }
+        .hero-chip strong { color: var(--blue); font-weight: 800; }
 
-        /* ========== PROOF ========== */
-        .proof-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-        .proof-card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 32px;
+        /* ========== VSL FRAME ========== */
+        .vsl-wrap { max-width: 740px; margin: 0 auto 26px; }
+        .vsl-frame {
             position: relative;
-        }
-        .proof-card .quote-mark {
-            font-size: 48px;
-            line-height: 1;
-            color: var(--blue);
-            margin-bottom: 12px;
-            font-weight: 900;
-        }
-        .proof-card .quote-text {
-            font-size: 16px;
-            color: var(--gray-light);
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-        .proof-card .quote-meta {
+            aspect-ratio: 16 / 9;
+            width: 100%;
+            background: linear-gradient(135deg, var(--card), var(--dark));
+            border: 1px solid rgba(46, 145, 252, 0.18);
+            border-radius: 16px;
+            box-shadow: 0 24px 60px rgba(46, 145, 252, 0.12);
             display: flex;
-            align-items: center;
-            gap: 12px;
-            padding-top: 16px;
-            border-top: 1px solid var(--border);
-        }
-        .quote-avatar {
-            width: 44px;
-            height: 44px;
-            background: var(--blue-glow);
-            border-radius: 50%;
-            display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            font-weight: 800;
-            color: var(--blue);
-        }
-        .quote-name { font-size: 14px; font-weight: 700; }
-        .quote-role { font-size: 12px; color: var(--gray); }
-
-        .proof-note {
-            text-align: center;
-            margin-top: 32px;
-            font-size: 13px;
-            color: var(--gray-dark);
-            font-style: italic;
-        }
-
-        /* ========== LEAD MAGNET ========== */
-        .leadmag {
-            background: linear-gradient(135deg, var(--bg-2) 0%, var(--surface) 100%);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 64px 48px;
-            text-align: center;
-        }
-        .leadmag h2 { margin-bottom: 12px; }
-        .leadmag p { font-size: 17px; max-width: 560px; margin: 0 auto 32px; }
-        .leadmag-form {
-            display: flex;
-            gap: 12px;
-            max-width: 520px;
-            margin: 0 auto;
-            flex-wrap: wrap;
-        }
-        .leadmag-form input {
-            flex: 1;
-            min-width: 200px;
-            padding: 14px 18px;
-            background: var(--bg);
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            color: var(--white);
-            font-size: 15px;
-            font-family: inherit;
-        }
-        .leadmag-form input:focus { outline: none; border-color: var(--blue); }
-        .leadmag-form button { white-space: nowrap; }
-        .leadmag-small { font-size: 12px; color: var(--gray-dark); margin-top: 16px; }
-
-        /* ========== OFFER ========== */
-        .offer {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 56px 40px;
-            text-align: center;
-            position: relative;
             overflow: hidden;
         }
-        .offer::before {
-            content: '';
+        .vsl-frame::before {
+            content: "";
             position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60%;
-            height: 4px;
-            background: linear-gradient(90deg, transparent, var(--blue), transparent);
+            inset: 0;
+            background: radial-gradient(400px 200px at 50% 50%, rgba(46, 145, 252, 0.1), transparent 70%);
+            pointer-events: none;
         }
-        .offer-eyebrow {
+        .vsl-play {
+            width: 80px; height: 80px;
+            border-radius: 50%;
+            background: rgba(46, 145, 252, 0.15);
+            border: 2px solid var(--blue);
+            display: flex; align-items: center; justify-content: center;
+            margin-bottom: 16px;
+            position: relative; z-index: 1;
+            transition: transform .25s ease, background .25s ease;
+        }
+        .vsl-play svg { width: 34px; height: 34px; fill: var(--blue); margin-left: 5px; }
+        .vsl-frame:hover .vsl-play { transform: scale(1.05); background: rgba(46, 145, 252, 0.28); }
+        .vsl-label { font-weight: 600; font-size: 16px; color: var(--white); position: relative; z-index: 1; margin-bottom: 6px; padding: 0 16px; text-align: center; }
+        .vsl-sub { font-size: 12px; color: var(--gray-400); letter-spacing: 0.08em; text-transform: uppercase; position: relative; z-index: 1; }
+
+        .hero-cta {
             display: inline-block;
             background: var(--blue);
             color: var(--white);
-            padding: 6px 14px;
-            border-radius: 4px;
-            font-size: 11px;
+            padding: 16px 40px;
+            border-radius: 10px;
+            text-decoration: none;
             font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 20px;
-        }
-        .offer h2 { margin-bottom: 16px; }
-        .offer-includes {
-            list-style: none;
-            text-align: left;
-            max-width: 560px;
-            margin: 32px auto;
-        }
-        .offer-includes li {
-            padding: 12px 0 12px 36px;
-            position: relative;
             font-size: 16px;
-            color: var(--gray-light);
-            border-bottom: 1px solid var(--border);
+            transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 0 30px rgba(46, 145, 252, 0.18);
         }
-        .offer-includes li:last-child { border-bottom: none; }
-        .offer-includes li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            top: 12px;
-            width: 24px;
-            height: 24px;
-            background: var(--blue);
-            color: var(--white);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 900;
-            font-size: 14px;
-        }
-        .offer-cta { margin-top: 32px; }
-        .offer-guarantee {
-            margin-top: 24px;
-            font-size: 14px;
-            color: var(--gray);
-            max-width: 480px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+        .hero-cta:hover { background: var(--blue-dark); transform: translateY(-2px); box-shadow: 0 0 40px rgba(46, 145, 252, 0.3); }
+        .hero-cta-note { display: block; margin-top: 12px; font-size: 13px; color: var(--gray-400); }
+
+        /* ========== SECTIONS ========== */
+        section { padding: 100px 0; }
+        .section-label { font-size: 12px; font-weight: 700; color: var(--blue); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 16px; }
+        .section-title { font-size: clamp(28px, 4vw, 42px); font-weight: 800; line-height: 1.15; letter-spacing: -1px; margin-bottom: 20px; }
+        .section-title span { color: var(--blue); }
+        .section-subtitle { font-size: 17px; color: var(--gray-300); max-width: 620px; line-height: 1.7; }
+        .center { text-align: center; }
+        .center .section-subtitle { margin: 0 auto; }
+
+        /* ========== PROBLEM ========== */
+        .problem { background: var(--surface); }
+        .problem-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 48px; }
+        .problem-card { background: var(--card); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 32px; transition: border-color 0.3s, transform 0.3s; }
+        .problem-card:hover { border-color: var(--red-border); transform: translateY(-2px); }
+        .problem-card .icon { width: 48px; height: 48px; background: var(--red-soft); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 20px; }
+        .problem-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 12px; }
+        .problem-card p { font-size: 15px; color: var(--gray-400); line-height: 1.7; }
+
+        /* ========== SOLUTION / MECHANISM ========== */
+        .solution-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 48px; align-items: center; }
+        .solution-steps { display: flex; flex-direction: column; gap: 24px; }
+        .solution-step { display: flex; gap: 20px; align-items: flex-start; }
+        .step-number { flex-shrink: 0; width: 48px; height: 48px; background: var(--blue); color: var(--white); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 18px; }
+        .step-content h3 { font-size: 17px; font-weight: 700; margin-bottom: 6px; }
+        .step-content p { font-size: 15px; color: var(--gray-400); line-height: 1.6; }
+        .solution-visual { background: linear-gradient(135deg, var(--card) 0%, var(--surface) 100%); border: 1px solid rgba(46, 145, 252, 0.15); border-radius: 20px; padding: 48px 40px; text-align: center; }
+        .solution-visual .big-text { font-size: clamp(40px, 7vw, 72px); font-weight: 800; line-height: 1; letter-spacing: -2px; margin-bottom: 14px; color: var(--blue); }
+        .solution-visual .big-label { font-size: 13px; color: var(--gray-400); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 24px; }
+        .solution-visual p { font-size: 15px; color: var(--gray-400); line-height: 1.7; }
+
+        /* ========== SOCIAL PROOF ========== */
+        .social-proof { background: var(--surface); }
+        .proof-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 48px; }
+        .proof-card { background: var(--card); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 32px; transition: border-color 0.3s, transform 0.3s; }
+        .proof-card:hover { border-color: rgba(46, 145, 252, 0.3); transform: translateY(-2px); }
+        .proof-card .quote { font-size: 15px; color: var(--gray-300); line-height: 1.7; margin-bottom: 16px; font-style: italic; }
+        .proof-card .author { font-size: 14px; font-weight: 700; color: var(--blue); }
+        .proof-card .role { font-size: 13px; color: var(--gray-400); }
+        .proof-note { text-align: center; margin-top: 28px; font-size: 13px; color: var(--gray-600); font-style: italic; }
+
+        /* ========== LEAD MAGNET ========== */
+        .lead-magnet-box { background: linear-gradient(135deg, var(--surface) 0%, var(--card) 100%); border: 1px solid rgba(46, 145, 252, 0.18); border-radius: 20px; padding: 56px 40px; text-align: center; margin-top: 8px; }
+        .lead-magnet-box h2 { font-size: clamp(24px, 3.4vw, 34px); font-weight: 800; margin-bottom: 12px; letter-spacing: -0.5px; }
+        .lead-magnet-box h2 span { color: var(--blue); }
+        .lead-magnet-box p { font-size: 16px; color: var(--gray-300); max-width: 560px; margin: 0 auto 28px; }
+        .lead-form { display: flex; gap: 12px; max-width: 520px; margin: 0 auto; flex-wrap: wrap; }
+        .lead-form input { flex: 1; min-width: 200px; padding: 14px 18px; background: var(--dark); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: var(--white); font-size: 15px; font-family: inherit; }
+        .lead-form input:focus { outline: none; border-color: var(--blue); }
+        .lead-form button { background: var(--blue); color: var(--white); border: none; padding: 14px 28px; border-radius: 8px; font-weight: 800; font-size: 15px; cursor: pointer; white-space: nowrap; transition: background 0.2s; font-family: inherit; }
+        .lead-form button:hover { background: var(--blue-dark); }
+        .lead-small { font-size: 12px; color: var(--gray-600); margin-top: 14px; }
+
+        /* ========== OFFER ========== */
+        .offer { background: var(--surface); }
+        .offer-box { background: var(--card); border: 1px solid rgba(46, 145, 252, 0.2); border-radius: 20px; padding: 56px 40px; text-align: center; max-width: 720px; margin: 48px auto 0; position: relative; overflow: hidden; }
+        .offer-box::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 60%; height: 4px; background: linear-gradient(90deg, transparent, var(--blue), transparent); }
+        .offer-eyebrow { display: inline-block; background: var(--blue); color: var(--white); padding: 6px 14px; border-radius: 4px; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 18px; }
+        .offer-box h2 { font-size: clamp(24px, 3.4vw, 34px); font-weight: 800; margin-bottom: 12px; }
+        .offer-box h2 span { color: var(--blue); }
+        .offer-box > p { font-size: 16px; color: var(--gray-300); max-width: 540px; margin: 0 auto; }
+        .offer-list { list-style: none; text-align: left; max-width: 540px; margin: 28px auto; }
+        .offer-list li { padding: 12px 0 12px 36px; position: relative; font-size: 15px; color: var(--gray-300); border-bottom: 1px solid rgba(255,255,255,0.06); }
+        .offer-list li:last-child { border-bottom: none; }
+        .offer-list li::before { content: '✓'; position: absolute; left: 0; top: 12px; width: 24px; height: 24px; background: var(--blue); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 13px; }
+        .offer-cta { display: inline-block; background: var(--blue); color: var(--white); padding: 16px 40px; border-radius: 10px; text-decoration: none; font-weight: 800; font-size: 16px; transition: background 0.2s, transform 0.2s; box-shadow: 0 0 30px rgba(46, 145, 252, 0.18); }
+        .offer-cta:hover { background: var(--blue-dark); transform: translateY(-2px); }
+        .offer-guarantee { margin-top: 22px; font-size: 14px; color: var(--gray-400); max-width: 480px; margin-left: auto; margin-right: auto; }
 
         /* ========== ABOUT ========== */
-        .about-wrap {
-            display: grid;
-            grid-template-columns: 280px 1fr;
-            gap: 56px;
-            align-items: center;
-        }
-        .about-photo {
-            width: 280px;
-            height: 280px;
-            border-radius: 16px;
-            background: linear-gradient(135deg, var(--blue) 0%, var(--bg-2) 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 96px;
-            font-weight: 900;
-            color: var(--white);
-            border: 2px solid var(--border);
-            overflow: hidden;
-        }
-        .about-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .about-text h2 { text-align: left; margin-bottom: 20px; }
-        .about-text p { font-size: 16px; margin-bottom: 16px; }
-        .about-credentials {
-            list-style: none;
-            margin-top: 20px;
-        }
-        .about-credentials li {
-            padding: 8px 0 8px 28px;
-            position: relative;
-            font-size: 15px;
-            color: var(--gray-light);
-        }
-        .about-credentials li::before {
-            content: '▶';
-            position: absolute;
-            left: 0;
-            color: var(--blue);
-            font-size: 11px;
-            top: 12px;
-        }
+        .about-grid { display: grid; grid-template-columns: 300px 1fr; gap: 56px; align-items: center; }
+        .about-image { width: 300px; height: 300px; border-radius: 20px; background: linear-gradient(135deg, var(--blue) 0%, var(--surface) 100%); border: 2px solid rgba(255,255,255,0.08); overflow: hidden; display: flex; align-items: center; justify-content: center; font-size: 90px; font-weight: 800; color: var(--white); }
+        .about-image img { width: 100%; height: 100%; object-fit: cover; }
+        .about-content h2 { font-size: clamp(26px, 3.6vw, 38px); font-weight: 800; margin-bottom: 18px; letter-spacing: -0.5px; }
+        .about-content h2 span { color: var(--blue); }
+        .about-content p { font-size: 16px; color: var(--gray-300); margin-bottom: 14px; line-height: 1.7; }
+        .about-credentials { list-style: none; margin-top: 18px; }
+        .about-credentials li { padding: 8px 0 8px 28px; position: relative; font-size: 15px; color: var(--gray-300); }
+        .about-credentials li::before { content: '▶'; position: absolute; left: 0; top: 11px; color: var(--blue); font-size: 11px; }
 
         /* ========== FINAL CTA ========== */
-        .final-cta {
-            text-align: center;
-            padding: 96px 0;
-            background: linear-gradient(135deg, var(--bg-2) 0%, var(--bg) 100%);
-            border-top: 1px solid var(--border);
-        }
-        .final-cta h2 {
-            font-size: clamp(32px, 5vw, 52px);
-            max-width: 760px;
-            margin: 0 auto 24px;
-        }
+        .final-cta { background: linear-gradient(135deg, var(--surface) 0%, var(--dark) 100%); text-align: center; }
+        .final-cta h2 { font-size: clamp(30px, 5vw, 52px); font-weight: 800; max-width: 780px; margin: 0 auto 20px; letter-spacing: -1px; }
         .final-cta h2 span { color: var(--blue); }
-        .final-cta p {
-            font-size: 18px;
-            max-width: 600px;
-            margin: 0 auto 36px;
-        }
+        .final-cta p { font-size: 18px; color: var(--gray-300); max-width: 600px; margin: 0 auto 32px; }
 
         /* ========== FAQ ========== */
-        .faq-list {
-            max-width: 760px;
-            margin: 0 auto;
-        }
-        .faq-item {
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            margin-bottom: 12px;
-            background: var(--surface);
-            overflow: hidden;
-            transition: border-color 0.2s ease;
-        }
-        .faq-item.open { border-color: var(--border-hover); }
-        .faq-q {
-            padding: 22px 28px;
-            font-size: 16px;
-            font-weight: 700;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 16px;
-            user-select: none;
-        }
-        .faq-q .plus {
-            font-size: 24px;
-            color: var(--blue);
-            font-weight: 300;
-            transition: transform 0.3s ease;
-            line-height: 1;
-        }
+        .faq { background: var(--surface); }
+        .faq-list { max-width: 760px; margin: 48px auto 0; }
+        .faq-item { border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; margin-bottom: 12px; background: var(--card); overflow: hidden; transition: border-color 0.2s; }
+        .faq-item.open { border-color: rgba(46, 145, 252, 0.35); }
+        .faq-q { padding: 22px 28px; font-size: 16px; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; user-select: none; }
+        .faq-q .plus { font-size: 26px; color: var(--blue); font-weight: 300; transition: transform 0.3s; line-height: 1; }
         .faq-item.open .faq-q .plus { transform: rotate(45deg); }
-        .faq-a {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease;
-            padding: 0 28px;
-        }
-        .faq-item.open .faq-a {
-            max-height: 400px;
-            padding: 0 28px 24px;
-        }
-        .faq-a p { font-size: 15px; color: var(--gray-light); }
+        .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+        .faq-item.open .faq-a { max-height: 400px; }
+        .faq-a p { padding: 0 28px 24px; font-size: 15px; color: var(--gray-300); line-height: 1.7; }
 
         /* ========== FOOTER ========== */
-        .footer {
-            padding: 40px 0;
-            text-align: center;
-            border-top: 1px solid var(--border);
-            font-size: 13px;
-            color: var(--gray-dark);
-        }
+        .footer { padding: 40px 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.06); font-size: 13px; color: var(--gray-600); }
 
-        /* ========== ANIMATIONS ========== */
-        .reveal {
-            opacity: 0;
-            transform: translateY(24px);
-            transition: opacity 0.7s ease, transform 0.7s ease;
-        }
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        /* ========== REVEAL ========== */
+        .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
 
         /* ========== RESPONSIVE ========== */
         @media (max-width: 860px) {
-            section.block { padding: 64px 0; }
-            .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
-            .problem-grid { grid-template-columns: 1fr; }
-            .mechanism-wrap { grid-template-columns: 1fr; gap: 40px; }
-            .proof-grid { grid-template-columns: 1fr; }
-            .leadmag { padding: 48px 24px; }
-            .offer { padding: 40px 24px; }
-            .about-wrap { grid-template-columns: 1fr; text-align: center; gap: 32px; }
-            .about-photo { margin: 0 auto; width: 220px; height: 220px; font-size: 80px; }
-            .about-text h2 { text-align: center; }
-            .hero-trust { gap: 16px; font-size: 12px; }
-            .nav-cta { padding: 8px 14px; font-size: 12px; }
-            .hero { padding: 56px 0 40px; }
-            .hero-cta-row { flex-direction: column; align-items: stretch; }
-            .hero-cta-row .btn { width: 100%; }
+            section { padding: 64px 0; }
+            .solution-grid { grid-template-columns: 1fr; gap: 36px; }
+            .about-grid { grid-template-columns: 1fr; text-align: center; gap: 32px; }
+            .about-image { margin: 0 auto; width: 220px; height: 220px; font-size: 72px; }
+            .hero { padding: 80px 0 32px; }
+            .lead-form { flex-direction: column; }
+            .lead-form button { width: 100%; }
+            .offer-box, .lead-magnet-box { padding: 40px 24px; }
         }
     </style>
 </head>
 <body>
 
 <!-- ============= NAV ============= -->
-<nav class="nav">
-    <div class="container nav-inner">
-        <a href="#top" class="nav-logo">HAZTU<span>AGENCIA</span></a>
+<nav class="navbar">
+    <div class="container">
+        <a href="#top" class="nav-logo"><span class="logo-text">HAZTU<span>AGENCIA</span></span></a>
         <a href="#oferta" class="nav-cta">Ver entrenamiento</a>
     </div>
 </nav>
 
-<!-- ============= HERO ============= -->
+<!-- ============= HERO (VSL) ============= -->
 <section class="hero" id="top">
-    <div class="container-narrow">
-        <div class="hero-badge">Para latinos en USA y LATAM</div>
-        <h1>Cierra tu primer cliente en <span>30 a 90 días</span>. Sin producto, sin inventario y trabajando desde tu casa.</h1>
-        <p class="lede">El modelo que usa Giuliano Cisneros para facturar más de $70,000 al mes vendiendo servicios a negocios. Más de 300 latinos ya lo aplicaron. Aquí te enseño cómo.</p>
-        <div class="hero-cta-row">
-            <a href="#oferta" class="btn">Ver entrenamiento gratis</a>
-            <a href="#proof" class="btn btn-secondary">Ver resultados</a>
-        </div>
-        <div class="hero-trust">
-            <span><strong>300+</strong> alumnos entrenados</span>
-            <span><strong>100+</strong> con primer cliente cerrado</span>
-            <span><strong>636K</strong> seguidores en TikTok</span>
-        </div>
-    </div>
-</section>
-
-<!-- ============= STATS STRIP ============= -->
-<section class="stats-strip reveal">
     <div class="container">
-        <div class="stats-grid">
-            <div>
-                <div class="stat-number">$70K</div>
-                <div class="stat-label">Facturados en 1 mes</div>
-            </div>
-            <div>
-                <div class="stat-number">300+</div>
-                <div class="stat-label">Latinos entrenados</div>
-            </div>
-            <div>
-                <div class="stat-number">1-3</div>
-                <div class="stat-label">Meses al primer cliente</div>
-            </div>
-            <div>
-                <div class="stat-number">6+</div>
-                <div class="stat-label">Años de experiencia</div>
+        <div class="hero-badge reveal">Para latinos en USA y LATAM</div>
+        <h1 class="reveal">Cierra tu primer cliente en <span class="highlight">30 a 90 días</span>. Sin producto, sin inventario y desde tu casa.</h1>
+        <p class="sub reveal">El modelo que usa Giuliano Cisneros para facturar más de $70,000 al mes vendiendo servicios a negocios. Mira el entrenamiento gratis y, si es para ti, aplica para una llamada.</p>
+        <div class="hero-trust reveal">
+            <span class="hero-chip"><strong>300+</strong> alumnos</span>
+            <span class="hero-chip"><strong>100+</strong> con primer cliente</span>
+            <span class="hero-chip"><strong>636K</strong> en TikTok</span>
+            <span class="hero-chip"><strong>6 años</strong> vendiendo servicios</span>
+        </div>
+        <div class="vsl-wrap reveal">
+            <div class="vsl-frame">
+                <div class="vsl-play">
+                    <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+                <div class="vsl-label">Mira este entrenamiento gratis antes de aplicar</div>
+                <div class="vsl-sub">Paso 1: activa el sonido (8 a 10 min)</div>
             </div>
         </div>
+        <a href="#oferta" class="hero-cta reveal">Ver el entrenamiento gratis</a>
+        <span class="hero-cta-note reveal">Sin costo. Después decides si aplicas para una llamada.</span>
     </div>
 </section>
 
 <!-- ============= PROBLEM ============= -->
-<section class="block">
+<section class="problem">
     <div class="container">
-        <div class="section-header reveal">
-            <div class="eyebrow">El problema real</div>
-            <h2>Estás cansado de empezar todos los meses <span>en cero</span></h2>
-            <p>Si te identificas con alguno de estos puntos, este modelo fue construido para ti.</p>
+        <div class="center reveal">
+            <div class="section-label">El problema real</div>
+            <h2 class="section-title">Estás cansado de empezar todos los meses <span>en cero</span></h2>
+            <p class="section-subtitle">Si te identificas con alguno de estos puntos, este modelo fue construido para ti.</p>
         </div>
         <div class="problem-grid">
             <div class="problem-card reveal">
-                <div class="icon">1</div>
+                <div class="icon">😮‍💨</div>
                 <h3>El empleo no construye nada</h3>
                 <p>Trabajas 50 horas. Cobras. Pagas cuentas. Quedas en cero. El próximo mes vuelve a empezar la misma cinta. No hay activo, no hay propiedad, no hay salida.</p>
             </div>
             <div class="problem-card reveal">
-                <div class="icon">2</div>
+                <div class="icon">📉</div>
                 <h3>Ya compraste cursos antes</h3>
                 <p>Tres, cuatro, cinco. PDFs olvidados en Drive. Videos sin ver. No es problema de información. Es problema de no tener a quién preguntar cuando te trabas.</p>
             </div>
             <div class="problem-card reveal">
-                <div class="icon">3</div>
+                <div class="icon">🤷</div>
                 <h3>No sabes por dónde empezar</h3>
-                <p>Sabes que se puede ganar en internet. Lo viste en TikTok. Pero entre dropshipping, trading, agencias, contenido, no sabes cuál es el real. Y cada día que pasa te frustra más.</p>
+                <p>Sabes que se puede ganar en internet. Lo viste en TikTok. Pero entre dropshipping, trading, agencias y contenido, no sabes cuál es el real. Y cada día que pasa te frustra más.</p>
             </div>
         </div>
     </div>
 </section>
 
 <!-- ============= MECHANISM ============= -->
-<section class="block alt" id="mecanismo">
+<section id="mecanismo">
     <div class="container">
-        <div class="mechanism-wrap">
-            <div class="mechanism-text reveal">
-                <div class="eyebrow">El modelo Haztuagencia</div>
-                <h2>Vendes un servicio que el negocio del lado <span style="color: var(--blue);">ya necesita</span></h2>
-                <p>No abres tienda. No inviertes en inventario. No contratas equipo. Vendes uno solo: manejo de redes, ads pagados o contenido. El que sepas entregar y el que el mercado ya esté pagando.</p>
-                <p>El primer cliente cambia todo. Cuando cierras al primero, el segundo cuesta la mitad. El tercero llega por referido. Y ahí ya no estás aprendiendo a vender. Estás vendiendo.</p>
-                <ul class="mechanism-steps">
-                    <li>Elige un servicio que el negocio local ya esté pagando</li>
-                    <li>Aprende a entregarlo en 2 semanas o menos</li>
-                    <li>Cierra al primer cliente con el script exacto</li>
-                    <li>Cumple, cobra, y usa ese caso para cerrar al segundo</li>
-                </ul>
+        <div class="reveal">
+            <div class="section-label">El modelo Haztuagencia</div>
+            <h2 class="section-title">Vendes un servicio que el negocio del lado <span>ya necesita</span></h2>
+        </div>
+        <div class="solution-grid">
+            <div class="solution-steps">
+                <div class="solution-step reveal">
+                    <div class="step-number">1</div>
+                    <div class="step-content"><h3>Elige el servicio correcto</h3><p>Uno que el negocio local ya esté pagando: manejo de redes, ads o contenido. El que sepas entregar.</p></div>
+                </div>
+                <div class="solution-step reveal">
+                    <div class="step-number">2</div>
+                    <div class="step-content"><h3>Apréndelo en 2 semanas</h3><p>La primera venta no es para volverte experto. Es para validar que sabes cerrar y cumplir.</p></div>
+                </div>
+                <div class="solution-step reveal">
+                    <div class="step-number">3</div>
+                    <div class="step-content"><h3>Cierra al primer cliente</h3><p>Con el script exacto, sin sonar a vendedor. El primero cambia todo.</p></div>
+                </div>
+                <div class="solution-step reveal">
+                    <div class="step-number">4</div>
+                    <div class="step-content"><h3>Repite y escala</h3><p>Cumple, cobra, y usa ese caso para cerrar al segundo. El tercero llega por referido.</p></div>
+                </div>
             </div>
-            <div class="mechanism-visual reveal">
-                <div class="big">$10K</div>
-                <div class="label">Al mes posible</div>
-                <p class="sub">No es magia. Son entre 5 y 10 clientes pagando $1,000 a $2,000 al mes. El modelo se vuelve repetible cuando cierras al primero.</p>
+            <div class="solution-visual reveal">
+                <div class="big-text">$10K</div>
+                <div class="big-label">Al mes posible</div>
+                <p>No es magia. Son entre 5 y 10 clientes pagando $1,000 a $2,000 al mes. El modelo se vuelve repetible cuando cierras al primero.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ============= PROOF ============= -->
-<section class="block" id="proof">
+<!-- ============= SOCIAL PROOF ============= -->
+<section class="social-proof" id="resultados">
     <div class="container">
-        <div class="section-header reveal">
-            <div class="eyebrow">Resultados reales</div>
-            <h2>Lo que dicen los <span>alumnos</span></h2>
-            <p>Más de 100 estudiantes cerraron su primer cliente en 1 a 3 meses. Una muestra de quiénes y cómo lo lograron.</p>
+        <div class="center reveal">
+            <div class="section-label">Resultados reales</div>
+            <h2 class="section-title">Lo que dicen los <span>alumnos</span></h2>
+            <p class="section-subtitle">Más de 100 estudiantes cerraron su primer cliente en 1 a 3 meses. Una muestra de cómo lo lograron.</p>
         </div>
         <div class="proof-grid">
             <div class="proof-card reveal">
-                <div class="quote-mark">"</div>
-                <p class="quote-text">Entré al programa trabajando en almacén. En 7 meses estaba haciendo $15,000 al mes con mi propia agencia. Lo que más cambió fue tener a Giuliano contestando cuando me trababa.</p>
-                <div class="quote-meta">
-                    <div class="quote-avatar">C</div>
-                    <div>
-                        <div class="quote-name">Carlos R.</div>
-                        <div class="quote-role">Alumno, Houston TX</div>
-                    </div>
-                </div>
+                <p class="quote">"Entré trabajando en almacén. En 7 meses estaba haciendo $15,000 al mes con mi propia agencia. Lo que más cambió fue tener a Giuliano contestando cuando me trababa."</p>
+                <div class="author">Carlos R.</div>
+                <div class="role">Alumno, Houston TX</div>
             </div>
             <div class="proof-card reveal">
-                <div class="quote-mark">"</div>
-                <p class="quote-text">Cerré mi primer cliente a las 6 semanas. $1,500 al mes manejándole redes a una clínica dental. Hoy tengo 4 clientes y ya dejé el empleo. El script de venta fue lo que me dio el switch.</p>
-                <div class="quote-meta">
-                    <div class="quote-avatar">M</div>
-                    <div>
-                        <div class="quote-name">María L.</div>
-                        <div class="quote-role">Alumna, Miami FL</div>
-                    </div>
-                </div>
+                <p class="quote">"Cerré mi primer cliente a las 6 semanas. $1,500 al mes manejándole redes a una clínica dental. Hoy tengo 4 clientes y ya dejé el empleo. El script de venta fue el switch."</p>
+                <div class="author">María L.</div>
+                <div class="role">Alumna, Miami FL</div>
             </div>
             <div class="proof-card reveal">
-                <div class="quote-mark">"</div>
-                <p class="quote-text">Llevaba 2 años intentando hacer plata en internet. Cursos, dropshipping, trading. Nada pegaba. Con Haztuagencia cerré mi primer cliente al mes 2. La diferencia fue tener una comunidad que ya lo había hecho.</p>
-                <div class="quote-meta">
-                    <div class="quote-avatar">J</div>
-                    <div>
-                        <div class="quote-name">Jairo G.</div>
-                        <div class="quote-role">Alumno, Los Angeles CA</div>
-                    </div>
-                </div>
+                <p class="quote">"Llevaba 2 años intentando hacer plata en internet. Nada pegaba. Con Haztuagencia cerré mi primer cliente al mes 2. La diferencia fue una comunidad que ya lo había hecho."</p>
+                <div class="author">Jairo G.</div>
+                <div class="role">Alumno, Los Angeles CA</div>
             </div>
         </div>
         <p class="proof-note">Testimonios representativos. Espacios reservados para sumar 6 a 12 casos más con foto, video y cifras verificadas.</p>
@@ -784,30 +432,34 @@
 </section>
 
 <!-- ============= LEAD MAGNET ============= -->
-<section class="block alt">
-    <div class="container-narrow">
-        <div class="leadmag reveal">
-            <div class="eyebrow">Para los que aún no están listos</div>
-            <h2>Checklist gratis: <span style="color: var(--blue);">los 7 pasos para cerrar tu primer cliente</span></h2>
+<section id="guia">
+    <div class="container">
+        <div class="lead-magnet-box reveal">
+            <div class="section-label">Para los que aún no quieren ver el video</div>
+            <h2>Checklist gratis: <span>los 7 pasos para cerrar tu primer cliente</span></h2>
             <p>El paso a paso exacto que siguen los alumnos que cierran en menos de 90 días. PDF de una página. Lo lees en 4 minutos. Lo aplicas hoy.</p>
-            <form class="leadmag-form" onsubmit="event.preventDefault(); alert('Te llegará el checklist al correo en menos de 60 segundos.'); this.reset();">
+            <form class="lead-form" onsubmit="event.preventDefault(); alert('Te llegará el checklist al correo en menos de 60 segundos.'); this.reset();">
                 <input type="text" placeholder="Tu nombre" required>
                 <input type="email" placeholder="Tu mejor email" required>
-                <button type="submit" class="btn">Enviarme el checklist</button>
+                <button type="submit">Enviarme el checklist</button>
             </form>
-            <p class="leadmag-small">Cero spam. Cancelas cuando quieras.</p>
+            <p class="lead-small">Cero spam. Cancelas cuando quieras.</p>
         </div>
     </div>
 </section>
 
 <!-- ============= OFFER ============= -->
-<section class="block" id="oferta">
-    <div class="container-narrow">
-        <div class="offer reveal">
+<section class="offer" id="oferta">
+    <div class="container">
+        <div class="center reveal">
+            <div class="section-label">El siguiente paso</div>
+            <h2 class="section-title">Mira el entrenamiento. Luego <span>aplica para una llamada</span>.</h2>
+        </div>
+        <div class="offer-box reveal">
             <div class="offer-eyebrow">Entrenamiento gratuito</div>
-            <h2>El modelo completo, sin filtros, <span style="color: var(--blue);">en un video gratis</span></h2>
-            <p style="font-size: 17px; max-width: 580px; margin: 0 auto;">Una hora. Sin venta encubierta. Sin promesas vacías. El modelo exacto que aplico yo y los 300+ alumnos de Haztuagencia.</p>
-            <ul class="offer-includes">
+            <h2>El modelo completo, sin filtros, <span>en un video gratis</span></h2>
+            <p>Sin venta encubierta. Sin promesas vacías. El modelo exacto que aplico yo y los 300+ alumnos de Haztuagencia.</p>
+            <ul class="offer-list">
                 <li>Qué servicio vender al inicio según tu nivel</li>
                 <li>Cómo cerrar al primer cliente sin sonar a vendedor</li>
                 <li>Script de llamada palabra por palabra</li>
@@ -815,24 +467,22 @@
                 <li>Cómo entregar el primer servicio en menos de 2 horas al día</li>
                 <li>Errores comunes que matan la primera venta</li>
             </ul>
-            <div class="offer-cta">
-                <a href="#" class="btn">Quiero ver el entrenamiento</a>
-            </div>
-            <p class="offer-guarantee">Si después del video crees que es para ti, te explico cómo entrar a la mentoría. Si no, te llevas el modelo y lo aplicas por tu cuenta. Sin riesgo.</p>
+            <a href="#" class="offer-cta">Ver el entrenamiento gratis</a>
+            <p class="offer-guarantee">Cuando termines el video, si crees que es para ti, aplicas para una llamada. Si no, te llevas el modelo y lo aplicas por tu cuenta. Sin riesgo.</p>
         </div>
     </div>
 </section>
 
 <!-- ============= ABOUT ============= -->
-<section class="block alt">
+<section id="sobre">
     <div class="container">
-        <div class="about-wrap">
-            <div class="about-photo reveal">
+        <div class="about-grid">
+            <div class="about-image reveal">
                 <img src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/sites/2147662331/images/4163b03-e202-d4dc-f8f3-a8f2e8387cf_HTA.png?v=2" alt="Giuliano Cisneros" onerror="this.style.display='none'; this.parentElement.innerHTML='GC';">
             </div>
-            <div class="about-text reveal">
-                <div class="eyebrow">Sobre Giuliano</div>
-                <h2>De vender servicios desde mi cuarto a <span style="color: var(--blue);">$70K al mes</span></h2>
+            <div class="about-content reveal">
+                <div class="section-label">Sobre Giuliano</div>
+                <h2>De vender servicios desde mi cuarto a <span>$70K al mes</span></h2>
                 <p>Soy Giuliano Cisneros. CEO y fundador de Haztuagencia. Llevo más de 6 años vendiendo servicios a emprendedores y negocios. Empecé como tú, sin contactos y sin capital. Aprendí a vender el primer servicio. Cerré al primer cliente. Y después el modelo se volvió repetible.</p>
                 <p>Hoy mi trabajo es enseñarle a otros latinos a hacer lo mismo. No vendo curso. Vendo acompañamiento. Y ese es el detalle que hace que la gente cierre.</p>
                 <ul class="about-credentials">
@@ -849,19 +499,19 @@
 
 <!-- ============= FINAL CTA ============= -->
 <section class="final-cta">
-    <div class="container-narrow reveal">
+    <div class="container reveal">
         <h2>Tienes dos opciones. <span>Una construye algo tuyo</span>. La otra es seguir igual.</h2>
-        <p>El video gratis dura una hora. Si después de verlo crees que es para ti, hablamos. Si no, te queda el modelo. Sin pedirte nada a cambio.</p>
-        <a href="#oferta" class="btn">Ver el entrenamiento gratis</a>
+        <p>El video gratis dura unos minutos. Si después crees que es para ti, aplicas para una llamada. Si no, te queda el modelo. Sin pedirte nada a cambio.</p>
+        <a href="#oferta" class="hero-cta">Ver el entrenamiento gratis</a>
     </div>
 </section>
 
 <!-- ============= FAQ ============= -->
-<section class="block" id="faq">
-    <div class="container-narrow">
-        <div class="section-header reveal">
-            <div class="eyebrow">Preguntas frecuentes</div>
-            <h2>Lo que <span>todos preguntan</span></h2>
+<section class="faq" id="faq">
+    <div class="container">
+        <div class="center reveal">
+            <div class="section-label">Preguntas frecuentes</div>
+            <h2 class="section-title">Lo que <span>todos preguntan</span></h2>
         </div>
         <div class="faq-list">
             <div class="faq-item reveal">
@@ -886,7 +536,7 @@
             </div>
             <div class="faq-item reveal">
                 <div class="faq-q"><span>¿Cuánto cuesta y qué incluye exactamente?</span><span class="plus">+</span></div>
-                <div class="faq-a"><p>El entrenamiento de una hora es gratis. Si después decides aplicar a la mentoría, te explicamos el precio en una llamada corta. La mayoría de alumnos recupera la inversión con su primer cliente.</p></div>
+                <div class="faq-a"><p>El entrenamiento es gratis. Si después decides aplicar a la mentoría, te explicamos el precio en una llamada corta. La mayoría de alumnos recupera la inversión con su primer cliente.</p></div>
             </div>
         </div>
     </div>
@@ -894,28 +544,19 @@
 
 <!-- ============= FOOTER ============= -->
 <footer class="footer">
-    <div class="container">
-        &copy; 2026 Haztuagencia, por Giuliano Cisneros. Todos los derechos reservados.
-    </div>
+    <div class="container">&copy; 2026 Haztuagencia, por Giuliano Cisneros. Todos los derechos reservados.</div>
 </footer>
 
 <script>
-    // ===== Scroll reveal =====
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
-            }
+            if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
         });
     }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-    // ===== FAQ accordion =====
     document.querySelectorAll('.faq-q').forEach(q => {
-        q.addEventListener('click', () => {
-            q.parentElement.classList.toggle('open');
-        });
+        q.addEventListener('click', () => q.parentElement.classList.toggle('open'));
     });
 </script>
 

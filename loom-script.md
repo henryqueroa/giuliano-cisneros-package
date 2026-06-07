@@ -18,11 +18,11 @@ Reemplazar `[CALENDLY_URL]` antes de grabar la versión final.
 
 ## Recorrido (90 a 120 segundos)
 
-> "Esto que estás viendo es el paquete completo que construí pensando solo en tu negocio. Cinco entregables. Investigación, ángulos de campaña, scripts de ads, una landing page entera y un outline de VSL."
+> "Esto que estás viendo es el paquete completo que construí pensando solo en tu negocio. Investigación, ángulos de campaña, scripts de ads, dos funnels en vivo (tu página de VSL y un funnel de webinar nuevo) y un outline de VSL."
 
 *Acción: abrir la primera sección del accordion (Investigación).*
 
-> "En la investigación encontré cinco huecos. El más importante es este. Tu sitio entero es un opt-in al webinar. No hay sales page paralela. El que no quiere ver una hora de video, se va frío. Y como tienes el Pixel de Facebook cargado, eso me dice que estás corriendo ads. Cada visitante perdido cuesta plata real."
+> "En la investigación encontré cinco huecos. El más importante es este. Tu sitio entero es un opt-in al VSL. No hay sales page paralela que pre-venda, ni un segundo carril como un webinar. El que no quiere ver el video completo, se va frío. Y como tienes el Pixel de Facebook cargado, eso me dice que estás corriendo ads. Cada visitante perdido cuesta plata real."
 
 *Acción: scroll a la sección 02 (Ángulos), abrir y mostrar rápido.*
 
@@ -42,7 +42,7 @@ Reemplazar `[CALENDLY_URL]` antes de grabar la versión final.
 
 *Acción: regresar al hub page, scroll al final (CTA).*
 
-> "Todo esto es tuyo lo uses o no. Sin compromiso de nada. Si quieres hablar de implementar el resto, sales page en vivo, productizar los case studies, secuencia de retargeting y el nurture post-webinar, mi calendario está aquí: [CALENDLY_URL]."
+> "Todo esto es tuyo lo uses o no. Sin compromiso de nada. Si quieres hablar de implementar el resto, sales page en vivo, productizar los case studies, secuencia de retargeting y el funnel de webinar completo, mi calendario está aquí: https://calendly.com/henryque-zytrom/30min."
 
 > "Si no, también está bien. Suerte con todo. Sigue cerrando latinos. Es trabajo importante."
 
