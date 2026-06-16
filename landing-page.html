@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Haztuagencia | Cierra tu primer cliente en 30 a 90 días</title>
-    <meta name="description" content="El modelo que usa Giuliano Cisneros para facturar $70K al mes vendiendo servicios a negocios. Mira el entrenamiento gratis y aplica para una llamada.">
+    <meta name="description" content="El modelo que usa Giuliano Cisneros para facturar $70K al mes vendiendo servicios a negocios. Mira el video y agenda una llamada gratis.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -255,6 +255,30 @@
         .offer-cta { display: inline-block; background: var(--blue); color: var(--white); padding: 16px 40px; border-radius: 10px; text-decoration: none; font-weight: 800; font-size: 16px; transition: background 0.2s, transform 0.2s; box-shadow: 0 0 30px rgba(46, 145, 252, 0.18); }
         .offer-cta:hover { background: var(--blue-dark); transform: translateY(-2px); }
         .offer-guarantee { margin-top: 22px; font-size: 14px; color: var(--gray-400); max-width: 480px; margin-left: auto; margin-right: auto; }
+        /* ===== QUALIFICATION (typeform-style) ===== */
+        .qual-progress { height: 6px; background: rgba(255,255,255,0.08); border-radius: 100px; overflow: hidden; margin-bottom: 30px; }
+        .qual-progress-bar { height: 100%; width: 16%; background: var(--blue); border-radius: 100px; transition: width 0.4s ease; }
+        .qual-form { text-align: left; min-height: 240px; display: flex; flex-direction: column; justify-content: center; }
+        .qual-step { display: none; }
+        .qual-step.active { display: block; animation: qualIn 0.35s ease; }
+        @keyframes qualIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+        .qual-q { font-size: clamp(20px, 2.6vw, 26px); font-weight: 800; margin-bottom: 22px; color: var(--white); line-height: 1.25; }
+        .qual-input { width: 100%; padding: 16px 18px; background: var(--dark); border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; color: var(--white); font-size: 17px; font-family: inherit; margin-bottom: 18px; }
+        .qual-input:focus { outline: none; border-color: var(--blue); }
+        .qual-options { display: flex; flex-direction: column; gap: 12px; margin-bottom: 18px; }
+        .qual-option { text-align: left; padding: 16px 18px; background: var(--dark); border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; color: var(--gray-300); font-size: 16px; font-weight: 600; font-family: inherit; cursor: pointer; transition: border-color .2s, background .2s, color .2s; }
+        .qual-option:hover, .qual-option.sel { border-color: var(--blue); background: var(--blue-soft); color: var(--white); }
+        .qual-row { display: flex; gap: 12px; align-items: center; }
+        .qual-next, .qual-back { padding: 14px 30px; border-radius: 10px; font-weight: 800; font-size: 15px; font-family: inherit; cursor: pointer; border: none; transition: background .2s, transform .2s; }
+        .qual-next { background: var(--blue); color: var(--white); margin-left: auto; }
+        .qual-next:hover { background: var(--blue-dark); transform: translateY(-2px); }
+        .qual-back { background: transparent; color: var(--gray-400); border: 1px solid rgba(255,255,255,0.12); }
+        .qual-back:hover { color: var(--white); }
+        .qual-step[data-step="5"] { text-align: center; }
+        .qual-done-icon { width: 64px; height: 64px; border-radius: 50%; background: var(--blue); color: #fff; font-size: 32px; font-weight: 800; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; }
+        .qual-done-text { font-size: 16px; color: var(--gray-300); max-width: 440px; margin: 0 auto 22px; }
+        .qual-step[data-step="5"] .offer-cta { margin: 0 auto; }
+        .qual-done-note { font-size: 13px; color: var(--gray-400); margin-top: 16px; }
 
         /* ========== ABOUT ========== */
         .about-grid { display: grid; grid-template-columns: 300px 1fr; gap: 56px; align-items: center; }
@@ -311,7 +335,7 @@
 <nav class="navbar">
     <div class="container">
         <a href="#top" class="nav-logo"><span class="logo-text">HAZTU<span>AGENCIA</span></span></a>
-        <a href="#oferta" class="nav-cta">Ver entrenamiento</a>
+        <a href="#agendar" class="nav-cta">Agendar una llamada</a>
     </div>
 </nav>
 
@@ -320,7 +344,7 @@
     <div class="container">
         <div class="hero-badge reveal">Para latinos en USA y LATAM</div>
         <h1 class="reveal">Cierra tu primer cliente en <span class="highlight">30 a 90 días</span>. Sin producto, sin inventario y desde tu casa.</h1>
-        <p class="sub reveal">El modelo que usa Giuliano Cisneros para facturar más de $70,000 al mes vendiendo servicios a negocios. Mira el entrenamiento gratis y, si es para ti, aplica para una llamada.</p>
+        <p class="sub reveal">El modelo que usa Giuliano Cisneros para facturar más de $70,000 al mes vendiendo servicios a negocios. Mira el video y, si es para ti, agenda una llamada gratis.</p>
         <div class="hero-trust reveal">
             <span class="hero-chip"><strong>300+</strong> alumnos</span>
             <span class="hero-chip"><strong>100+</strong> con primer cliente</span>
@@ -331,10 +355,10 @@
             <div class="vsl-frame">
                 <iframe src="https://www.youtube.com/embed/gzDSQhU4Nks?rel=0&modestbranding=1" title="Entrenamiento Haztuagencia — Giuliano Cisneros" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
-            <div class="vsl-caption">Paso 1: activa el sonido y mira el entrenamiento (8 a 10 min)</div>
+            <div class="vsl-caption">Paso 1: activa el sonido y mira el video. Paso 2: agenda tu llamada.</div>
         </div>
-        <a href="#oferta" class="hero-cta reveal">Ver el entrenamiento gratis</a>
-        <span class="hero-cta-note reveal">Sin costo. Después decides si aplicas para una llamada.</span>
+        <a href="#agendar" class="hero-cta reveal">Agendar una llamada</a>
+        <span class="hero-cta-note reveal">Gratis y sin compromiso. Cupos limitados por semana.</span>
     </div>
 </section>
 
@@ -447,27 +471,60 @@
     </div>
 </section>
 
-<!-- ============= OFFER ============= -->
-<section class="offer" id="oferta">
+<!-- ============= AGENDAR (calificación) ============= -->
+<section class="offer" id="agendar">
     <div class="container">
         <div class="center reveal">
             <div class="section-label">El siguiente paso</div>
-            <h2 class="section-title">Mira el entrenamiento. Luego <span>aplica para una llamada</span>.</h2>
+            <h2 class="section-title">¿Listo para construir tu agencia? <span>Agenda tu llamada</span></h2>
+            <p class="section-subtitle">Responde unas preguntas rápidas. Si calificas, agendamos una llamada gratis para ver si Haztuagencia es para ti.</p>
         </div>
         <div class="offer-box reveal">
-            <div class="offer-eyebrow">Entrenamiento gratuito</div>
-            <h2>El modelo completo, sin filtros, <span>en un video gratis</span></h2>
-            <p>Sin venta encubierta. Sin promesas vacías. El modelo exacto que aplico yo y los 300+ alumnos de Haztuagencia.</p>
-            <ul class="offer-list">
-                <li>Qué servicio vender al inicio según tu nivel</li>
-                <li>Cómo cerrar al primer cliente sin sonar a vendedor</li>
-                <li>Script de llamada palabra por palabra</li>
-                <li>Los 3 nichos que más rápido pagan en USA y LATAM</li>
-                <li>Cómo entregar el primer servicio en menos de 2 horas al día</li>
-                <li>Errores comunes que matan la primera venta</li>
-            </ul>
-            <a href="#" class="offer-cta">Ver el entrenamiento gratis</a>
-            <p class="offer-guarantee">Cuando termines el video, si crees que es para ti, aplicas para una llamada. Si no, te llevas el modelo y lo aplicas por tu cuenta. Sin riesgo.</p>
+            <div class="qual-progress"><div class="qual-progress-bar" id="qualBar"></div></div>
+            <form id="qualForm" class="qual-form" autocomplete="on" onsubmit="return false;">
+                <div class="qual-step active" data-step="0">
+                    <div class="qual-q">Para empezar, ¿cómo te llamas?</div>
+                    <input class="qual-input" type="text" name="nombre" placeholder="Tu nombre y apellido" required>
+                    <div class="qual-row"><button type="button" class="qual-next">Continuar</button></div>
+                </div>
+                <div class="qual-step" data-step="1">
+                    <div class="qual-q">¿Cuál es tu mejor correo?</div>
+                    <input class="qual-input" type="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+                    <div class="qual-row"><button type="button" class="qual-back">Atrás</button><button type="button" class="qual-next">Continuar</button></div>
+                </div>
+                <div class="qual-step" data-step="2">
+                    <div class="qual-q">¿Tu número de WhatsApp?</div>
+                    <input class="qual-input" type="tel" name="telefono" placeholder="+1 (000) 000-0000" required>
+                    <div class="qual-row"><button type="button" class="qual-back">Atrás</button><button type="button" class="qual-next">Continuar</button></div>
+                </div>
+                <div class="qual-step" data-step="3">
+                    <div class="qual-q">¿A qué te dedicas hoy?</div>
+                    <div class="qual-options" data-name="situacion">
+                        <button type="button" class="qual-option">Tengo un empleo tradicional</button>
+                        <button type="button" class="qual-option">Soy freelancer o independiente</button>
+                        <button type="button" class="qual-option">Ya tengo una agencia</button>
+                        <button type="button" class="qual-option">Otra cosa</button>
+                    </div>
+                    <div class="qual-row"><button type="button" class="qual-back">Atrás</button></div>
+                </div>
+                <div class="qual-step" data-step="4">
+                    <div class="qual-q">¿Cuándo quieres empezar?</div>
+                    <div class="qual-options" data-name="urgencia">
+                        <button type="button" class="qual-option">Ya mismo, estoy listo</button>
+                        <button type="button" class="qual-option">Este mes</button>
+                        <button type="button" class="qual-option">Solo estoy explorando</button>
+                    </div>
+                    <div class="qual-row"><button type="button" class="qual-back">Atrás</button></div>
+                </div>
+                <div class="qual-step" data-step="5">
+                    <div class="qual-done-icon">✓</div>
+                    <div class="qual-q" id="qualDoneTitle">¡Listo!</div>
+                    <p class="qual-done-text">Recibimos tus datos. El último paso es elegir el horario de tu llamada en el calendario.</p>
+                    <a href="https://calendly.com/henryque-zytrom/30min" class="offer-cta" id="qualCalendly" target="_blank" rel="noopener">Elegir horario de mi llamada</a>
+                    <p class="qual-done-note">Revisa tu correo y tu WhatsApp para la confirmación.</p>
+                </div>
+            </form>
+            <p class="offer-guarantee">La llamada es gratis y sin compromiso. Si no es para ti, te lo decimos de frente.</p>
         </div>
     </div>
 </section>
@@ -501,7 +558,7 @@
     <div class="container reveal">
         <h2>Tienes dos opciones. <span>Una construye algo tuyo</span>. La otra es seguir igual.</h2>
         <p>El video gratis dura unos minutos. Si después crees que es para ti, aplicas para una llamada. Si no, te queda el modelo. Sin pedirte nada a cambio.</p>
-        <a href="#oferta" class="hero-cta">Ver el entrenamiento gratis</a>
+        <a href="#agendar" class="hero-cta">Agendar una llamada</a>
     </div>
 </section>
 
@@ -535,7 +592,7 @@
             </div>
             <div class="faq-item reveal">
                 <div class="faq-q"><span>¿Cuánto cuesta y qué incluye exactamente?</span><span class="plus">+</span></div>
-                <div class="faq-a"><p>El entrenamiento es gratis. Si después decides aplicar a la mentoría, te explicamos el precio en una llamada corta. La mayoría de alumnos recupera la inversión con su primer cliente.</p></div>
+                <div class="faq-a"><p>La llamada es gratis y sin compromiso. Si decides entrar a la mentoría, te explicamos el precio ahí mismo. La mayoría de alumnos recupera la inversión con su primer cliente.</p></div>
             </div>
         </div>
     </div>
@@ -557,6 +614,64 @@
     document.querySelectorAll('.faq-q').forEach(q => {
         q.addEventListener('click', () => q.parentElement.classList.toggle('open'));
     });
+
+    // ===== Formulario de calificación multi-paso (estilo Typeform) =====
+    (function() {
+        const form = document.getElementById('qualForm');
+        if (!form) return;
+        const steps = Array.from(form.querySelectorAll('.qual-step'));
+        const bar = document.getElementById('qualBar');
+        const data = {};
+        let cur = 0;
+
+        function show(i) {
+            steps.forEach((s, idx) => s.classList.toggle('active', idx === i));
+            cur = i;
+            bar.style.width = Math.round(((i + 1) / steps.length) * 100) + '%';
+            const inp = steps[i].querySelector('.qual-input');
+            if (inp) setTimeout(() => inp.focus(), 60);
+            if (i === steps.length - 1) {
+                const t = document.getElementById('qualDoneTitle');
+                if (t && data.nombre) t.textContent = '¡Listo, ' + data.nombre.split(' ')[0] + '!';
+                // Prellenar Calendly con nombre y correo
+                const cal = document.getElementById('qualCalendly');
+                if (cal) {
+                    try {
+                        const u = new URL(cal.href);
+                        if (data.nombre) u.searchParams.set('name', data.nombre);
+                        if (data.email) u.searchParams.set('email', data.email);
+                        cal.href = u.toString();
+                    } catch (e) {}
+                }
+            }
+        }
+
+        function valid(i) {
+            const inp = steps[i].querySelector('.qual-input');
+            if (inp) {
+                if (!inp.value.trim() || (inp.type === 'email' && !inp.checkValidity())) {
+                    inp.focus(); inp.style.borderColor = '#ff5a5a'; return false;
+                }
+                data[inp.name] = inp.value.trim();
+            }
+            return true;
+        }
+
+        form.querySelectorAll('.qual-next').forEach(b => b.addEventListener('click', () => { if (valid(cur)) show(cur + 1); }));
+        form.querySelectorAll('.qual-back').forEach(b => b.addEventListener('click', () => show(cur - 1)));
+        form.querySelectorAll('.qual-input').forEach(inp => inp.addEventListener('keydown', e => {
+            inp.style.borderColor = '';
+            if (e.key === 'Enter') { e.preventDefault(); if (valid(cur)) show(cur + 1); }
+        }));
+        form.querySelectorAll('.qual-options').forEach(group => {
+            group.querySelectorAll('.qual-option').forEach(opt => opt.addEventListener('click', () => {
+                group.querySelectorAll('.qual-option').forEach(o => o.classList.remove('sel'));
+                opt.classList.add('sel');
+                data[group.dataset.name] = opt.textContent.trim();
+                setTimeout(() => { if (cur < steps.length - 1) show(cur + 1); }, 260);
+            }));
+        });
+    })();
 </script>
 
 </body>
