@@ -1,6 +1,8 @@
 # Secuencia de outreach. Giuliano Cisneros / Haztuagencia
 
-Diez emails (también funcionan como DMs adaptados) en español, voz Zytrom, dirigidos a Giuliano. El link al hub ya está en vivo. Reemplazar `[LOOM_URL]` con el Loom grabado antes de enviar.
+Diez emails (también funcionan como DMs adaptados) en español, voz Zytrom, dirigidos a Giuliano. El link al hub y el Loom ya están en vivo. Secuencia lista para enviar.
+
+**Loom grabado:** https://www.loom.com/share/ceefffceb9244f32bc2568ee3b179989 (2 min 13 seg, "Giuliano Hub")
 
 **Notas:**
 - Sin guion largo (em-dash). Coma o punto.
@@ -19,6 +21,8 @@ Hola Giuliano,
 Soy Henryque, fundador de Zytrom. Llevo unos días estudiando lo que estás haciendo con Haztuagencia y armé un paquete específico para ti. Investigación, ángulos de campaña, scripts de ads, dos funnels en vivo (tu página de VSL y un funnel de webinar completo) y un outline de VSL.
 
 Todo está aquí: https://henryqueroa.github.io/giuliano-cisneros-package/
+
+Y si prefieres verlo en 2 minutos, te grabé este video mostrándote lo que hay adentro: https://www.loom.com/share/ceefffceb9244f32bc2568ee3b179989
 
 No tienes que registrarte ni dar tu email. Es tuyo lo veas o no. Si te sirve algo, úsalo. Si no, te queda en archivo.
 
@@ -146,6 +150,8 @@ Giuliano,
 Quería saber si pudiste echarle un ojo al paquete que armé.
 
 https://henryqueroa.github.io/giuliano-cisneros-package/
+
+Si andas corto de tiempo, el video de 2 minutos lo resume todo: https://www.loom.com/share/ceefffceb9244f32bc2568ee3b179989
 
 Si lo viste y no es para ti, sin problema. Solo dime y dejo de escribir. Si lo viste y tienes feedback, también lo recibo.
 

@@ -1,10 +1,10 @@
 # Loom Script Evergreen. Giuliano Cisneros / Haztuagencia
 
+> **GRABADO (2026-07-05):** https://www.loom.com/share/ceefffceb9244f32bc2568ee3b179989 (2 min 13 seg, "Giuliano Hub"). El link ya está integrado en los emails 1 y 8 de la secuencia.
+
 **Duración objetivo:** 2 a 3 minutos
 **Formato:** Pantalla compartida con el hub page abierto, cámara en esquina (talking head pequeño)
 **Tono:** Casual, directo, confianza tranquila. Hablar como amigo, no como vendedor.
-
-Reemplazar `[CALENDLY_URL]` antes de grabar la versión final.
 
 ---
 
