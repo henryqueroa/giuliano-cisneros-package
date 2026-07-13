@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Preparado Para Giuliano Cisneros | Zytrom</title>
-    <meta name="description" content="Paquete de marketing completo para Haztuagencia: investigación, ángulos, ads, dos funnels en vivo (VSL y webinar) y outline de VSL. Por Zytrom.">
+    <meta name="description" content="El funnel de webinar que le falta a Haztuagencia, construido y en vivo: registro, guion, 22 slides y emails. Más investigación, ángulos de campaña, scripts de ads y la página de VSL. Por Zytrom.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -86,6 +86,34 @@
         .angle-card .angle-headline { font-size: 14px; color: var(--gold); font-weight: 600; margin-bottom: 8px; }
         .angle-card p { font-size: 13px; color: var(--gray); line-height: 1.7; margin-bottom: 0; }
 
+        /* ===== DECK VIEWER ===== */
+        .deck-viewer { outline: none; margin: 4px 0 16px; }
+        .deck-viewer:focus-visible .deck-stage { border-color: rgba(212, 175, 55, 0.4); }
+        .deck-stage { position: relative; aspect-ratio: 16 / 9; background: var(--surface-2); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; touch-action: pan-y; user-select: none; -webkit-user-select: none; }
+        .deck-stage img { width: 100%; height: 100%; object-fit: contain; display: block; cursor: zoom-in; }
+        .deck-nav { position: absolute; top: 50%; transform: translateY(-50%); width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border); background: rgba(6, 7, 10, 0.65); color: var(--white); font-size: 22px; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: color 0.2s, border-color 0.2s, background 0.2s; }
+        .deck-nav:hover { color: var(--gold); border-color: rgba(212, 175, 55, 0.4); background: rgba(6, 7, 10, 0.85); }
+        .deck-prev { left: 12px; }
+        .deck-next { right: 12px; }
+        .deck-expand { position: absolute; top: 12px; right: 12px; width: 36px; height: 36px; border-radius: 10px; border: 1px solid var(--border); background: rgba(6, 7, 10, 0.65); color: var(--white); font-size: 16px; cursor: pointer; transition: color 0.2s, border-color 0.2s; }
+        .deck-expand:hover { color: var(--gold); border-color: rgba(212, 175, 55, 0.4); }
+        .deck-counter { position: absolute; bottom: 12px; right: 12px; background: rgba(6, 7, 10, 0.75); border: 1px solid rgba(212, 175, 55, 0.25); color: var(--gold); font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 6px; }
+        .deck-downloads { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 4px; }
+        .deck-downloads .live-page-link { margin-top: 0; }
+        .deck-lightbox { position: fixed; inset: 0; z-index: 1000; background: rgba(6, 7, 10, 0.96); display: flex; align-items: center; justify-content: center; overscroll-behavior: contain; touch-action: pan-y; }
+        .deck-lightbox[hidden] { display: none; }
+        .deck-lightbox img { max-width: 94vw; max-height: 86vh; border-radius: 8px; }
+        .deck-lightbox .deck-close { position: absolute; top: 20px; right: 24px; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--border); background: rgba(6, 7, 10, 0.65); color: var(--white); font-size: 24px; line-height: 1; cursor: pointer; transition: color 0.2s; }
+        .deck-lightbox .deck-close:hover { color: var(--gold); }
+        .deck-lightbox .deck-prev { left: 20px; }
+        .deck-lightbox .deck-next { right: 20px; }
+        .deck-lightbox .deck-counter { bottom: 20px; right: auto; left: 50%; transform: translateX(-50%); }
+        @media (max-width: 480px) {
+            .deck-nav { width: 36px; height: 36px; font-size: 18px; }
+            .deck-lightbox .deck-prev { left: 8px; }
+            .deck-lightbox .deck-next { right: 8px; }
+        }
+
         /* ===== PROCESS ===== */
         .process { padding: 80px 0; border-top: 1px solid var(--border); }
         .process-title { font-size: 12px; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; text-align: center; }
@@ -138,8 +166,8 @@
                 <span class="brand-name brand-prospect">Haztuagencia</span>
             </div>
             <div class="header-badge reveal">Preparado exclusivamente para Giuliano Cisneros</div>
-            <h1 class="reveal">Un paquete de marketing completo. <span>Creado para tu negocio.</span></h1>
-            <p class="reveal">Analizamos tu funnel, tu audiencia y tu mercado. Identificamos los huecos que más dinero te están dejando en la mesa. Y construimos dos funnels en vivo, listos para usar: tu VSL y un webinar nuevo.</p>
+            <h1 class="reveal">El <span>funnel de webinar</span> que te falta. Construido y en vivo.</h1>
+            <p class="reveal">Analizamos tu funnel, tu audiencia y tu mercado. Tu VSL convierte al que ya llega caliente, pero el carril para el comprador tibio no existía. Te lo construimos completo: registro, guion, 22 slides y emails. Todo dentro de un paquete con dos funnels en vivo, listos para usar.</p>
         </div>
     </section>
 
@@ -159,7 +187,7 @@
     <!-- STATS BAR -->
     <div class="container">
         <div class="stats-bar reveal">
-            <div class="stat"><span class="number">15+</span><span class="label">Fuentes investigadas</span></div>
+            <div class="stat"><span class="number">22</span><span class="label">Slides de webinar</span></div>
             <div class="stat"><span class="number">5</span><span class="label">Huecos identificados</span></div>
             <div class="stat"><span class="number">5</span><span class="label">Ángulos de campaña</span></div>
             <div class="stat"><span class="number">2</span><span class="label">Funnels en vivo</span></div>
@@ -189,24 +217,66 @@
                         <p>Haztuagencia.com es un opt-in a un VSL (video de ventas grabado). El que deja su correo ve el video y el camino es aplicar a una llamada. Llega tráfico fuerte desde TikTok (636K seguidores), pero hay una sola puerta. Y como tienes el Pixel de Facebook cargado, cada visitante perdido cuesta dinero real.</p>
                         <h4>5 huecos identificados</h4>
                         <ul>
+                            <li><strong>Sin funnel de webinar paralelo.</strong> El hueco más importante. Todo tu tráfico entra por una sola puerta, el VSL, y el comprador tibio que necesita más contexto se va frío. Por eso te lo dejamos construido abajo, en el entregable 02, con las 22 slides a la vista.</li>
                             <li><strong>Sales page inexistente.</strong> No hay página larga que pre-venda antes del VSL ni que recoja al que no quiere ver el video completo.</li>
                             <li><strong>Pruebas sociales no productizadas.</strong> Tienes 300+ alumnos y 100+ casos. Ninguno vive en el sitio como case study con cara, monto y país.</li>
                             <li><strong>Un solo lead magnet.</strong> El VSL es la única puerta. Un checklist o auditoría gratis capturaría al que aún no quiere ver el video.</li>
                             <li><strong>Retargeting invisible.</strong> Pixel cargado, pero sin campañas de remarketing al que vio el VSL y no aplicó.</li>
-                            <li><strong>Sin funnel de webinar paralelo.</strong> Solo corres un VSL. Un webinar capta al comprador tibio que necesita más contexto antes de aplicar. Es el activo nuevo que te construimos en este paquete.</li>
                         </ul>
                         <div class="highlight-box">
-                            <p>Recomendación: mantén el VSL como puerta principal. Suma una sales page paralela, productiza 6 a 12 case studies, agrega lead magnets secundarios y abre un segundo carril con el funnel de webinar. Ese stack mueve la aguja sin tocar lo que ya funciona.</p>
+                            <p>Recomendación: abre el segundo carril con el funnel de webinar, que ya está construido en este paquete. Mantén el VSL como puerta principal, suma una sales page paralela, productiza 6 a 12 case studies y agrega lead magnets secundarios. Ese stack mueve la aguja sin tocar lo que ya funciona.</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- 02 Angles -->
+            <!-- 02 Webinar Funnel -->
             <div class="accordion-item reveal">
                 <button class="accordion-header">
                     <div class="accordion-header-left">
                         <div class="accordion-number">02</div>
+                        <span class="accordion-title">Funnel de webinar (nuevo)</span>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:12px;">
+                        <span class="accordion-tag">22 slides + página + emails</span>
+                        <span class="accordion-arrow">+</span>
+                    </div>
+                </button>
+                <div class="accordion-body">
+                    <div class="accordion-content">
+                        <p>La pieza central de este paquete. El VSL convierte al que ya llega caliente. El webinar capta al tibio: el que necesita una hora de valor y prueba antes de aplicar. Te lo dejamos construido completo, de punta a punta.</p>
+                        <h4>Qué incluye</h4>
+                        <ul>
+                            <li><strong>Página de registro en vivo:</strong> formulario, countdown a la próxima sesión y confirmación al registrarse. Lista para conectar a tu autoresponder.</li>
+                            <li><strong>Deck de 22 slides en tu marca:</strong> azul Haztuagencia, una idea por slide. Lo puedes hojear aquí mismo, sin descargar nada.</li>
+                            <li><strong>Guion completo del webinar:</strong> estructura tipo Perfect Webinar adaptada a tu oferta. Gancho, historia de origen, los 3 secretos, el stack de oferta y el cierre con Q&A.</li>
+                            <li><strong>Secuencia de 5 emails:</strong> confirmación, recordatorio 24h, recordatorio 1h, repetición y última llamada.</li>
+                        </ul>
+                        <h4>Las 22 slides, en tu marca</h4>
+                        <div class="deck-viewer" id="deckViewer" tabindex="0" aria-label="Slides del webinar. Usa las flechas para navegar">
+                            <div class="deck-stage" id="deckStage">
+                                <img id="deckImg" src="images/slides/slide-01.png" width="1600" height="900" loading="lazy" decoding="async" alt="Slide 1 de 22 del deck del webinar de Haztuagencia">
+                                <button type="button" class="deck-nav deck-prev" id="deckPrev" aria-label="Slide anterior">&#8249;</button>
+                                <button type="button" class="deck-nav deck-next" id="deckNext" aria-label="Slide siguiente">&#8250;</button>
+                                <button type="button" class="deck-expand" id="deckExpand" aria-label="Ver a pantalla completa">&#x2922;</button>
+                                <div class="deck-counter"><span id="deckNum">1</span> / 22</div>
+                            </div>
+                        </div>
+                        <div class="deck-downloads">
+                            <a class="live-page-link" href="https://henryqueroa.github.io/giuliano-cisneros-package/webinar/giuliano-cisneros-webinar-deck.pptx">Descargar el deck (.pptx)</a>
+                            <a class="live-page-link" href="https://henryqueroa.github.io/giuliano-cisneros-package/webinar/giuliano-cisneros-webinar-deck.pdf">Ver en PDF</a>
+                        </div>
+                        <div class="highlight-box"><p>No necesitas hacerlo en vivo cada semana. Grábalo una vez y córrelo automatizado: la página muestra el countdown a la próxima sesión y los emails hacen el seguimiento solos. El sistema trabaja aunque tú no estés.</p></div>
+                        <a class="live-page-link" href="https://henryqueroa.github.io/giuliano-cisneros-package/webinar.html" target="_blank" rel="noopener">Ver la página de registro en vivo →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 03 Angles -->
+            <div class="accordion-item reveal">
+                <button class="accordion-header">
+                    <div class="accordion-header-left">
+                        <div class="accordion-number">03</div>
                         <span class="accordion-title">Ángulos de campaña</span>
                     </div>
                     <div style="display:flex;align-items:center;gap:12px;">
@@ -225,11 +295,11 @@
                 </div>
             </div>
 
-            <!-- 03 Ad scripts -->
+            <!-- 04 Ad scripts -->
             <div class="accordion-item reveal">
                 <button class="accordion-header">
                     <div class="accordion-header-left">
-                        <div class="accordion-number">03</div>
+                        <div class="accordion-number">04</div>
                         <span class="accordion-title">Conceptos de anuncios</span>
                     </div>
                     <div style="display:flex;align-items:center;gap:12px;">
@@ -250,11 +320,11 @@
                 </div>
             </div>
 
-            <!-- 04 VSL Call Funnel page -->
+            <!-- 05 VSL Call Funnel page -->
             <div class="accordion-item reveal">
                 <button class="accordion-header">
                     <div class="accordion-header-left">
-                        <div class="accordion-number">04</div>
+                        <div class="accordion-number">05</div>
                         <span class="accordion-title">VSL Call Funnel (página en vivo)</span>
                     </div>
                     <div style="display:flex;align-items:center;gap:12px;">
@@ -276,33 +346,6 @@
                             <li>Sobre Giuliano y FAQ con 6 objeciones</li>
                         </ul>
                         <a class="live-page-link" href="https://henryqueroa.github.io/giuliano-cisneros-package/landing-page.html" target="_blank" rel="noopener">Ver la página de VSL en vivo →</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 05 Webinar Funnel -->
-            <div class="accordion-item reveal">
-                <button class="accordion-header">
-                    <div class="accordion-header-left">
-                        <div class="accordion-number">05</div>
-                        <span class="accordion-title">Funnel de webinar (nuevo)</span>
-                    </div>
-                    <div style="display:flex;align-items:center;gap:12px;">
-                        <span class="accordion-tag">Página + guion + emails</span>
-                        <span class="accordion-arrow">+</span>
-                    </div>
-                </button>
-                <div class="accordion-body">
-                    <div class="accordion-content">
-                        <p>El segundo carril que te falta. El VSL convierte al que ya está caliente. El webinar capta al tibio: el que necesita una hora de valor y prueba antes de aplicar. Te dejé el funnel completo y listo.</p>
-                        <h4>Qué incluye</h4>
-                        <ul>
-                            <li><strong>Página de registro en vivo:</strong> con formulario, countdown y contador de cupos. Lista para conectar a tu autoresponder.</li>
-                            <li><strong>Guion completo del webinar:</strong> estructura tipo Perfect Webinar adaptada a tu oferta. Gancho, historia de origen, los 3 secretos, el stack de oferta y el cierre con Q&A.</li>
-                            <li><strong>Secuencia de 5 emails:</strong> confirmación, recordatorio 24h, recordatorio 1h, repetición y última llamada.</li>
-                        </ul>
-                        <div class="highlight-box"><p>Promesa del webinar: "Cómo crear una agencia que facture $10,000 al mes vendiendo servicios." Mismo mensaje, formato distinto, otro segmento de compradores.</p></div>
-                        <a class="live-page-link" href="https://henryqueroa.github.io/giuliano-cisneros-package/webinar.html" target="_blank" rel="noopener">Ver la página de registro en vivo →</a>
                     </div>
                 </div>
             </div>
@@ -368,6 +411,15 @@
         <div class="container"><p>Construido por Zytrom &middot; 2026</p></div>
     </footer>
 
+    <!-- DECK LIGHTBOX (a nivel body: los transforms de .reveal atrapan position:fixed dentro de los accordions) -->
+    <div class="deck-lightbox" id="deckLightbox" hidden>
+        <button type="button" class="deck-close" id="deckClose" aria-label="Cerrar">&times;</button>
+        <button type="button" class="deck-nav deck-prev" id="deckLbPrev" aria-label="Slide anterior">&#8249;</button>
+        <img id="deckLbImg" src="images/slides/slide-01.png" alt="Slide 1 de 22 del deck del webinar de Haztuagencia">
+        <button type="button" class="deck-nav deck-next" id="deckLbNext" aria-label="Slide siguiente">&#8250;</button>
+        <div class="deck-counter"><span id="deckLbNum">1</span> / 22</div>
+    </div>
+
     <script>
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
@@ -382,6 +434,69 @@
                 if (!wasActive) item.classList.add('active');
             });
         });
+
+        // ===== DECK VIEWER =====
+        (function() {
+            const TOTAL = 22;
+            let cur = 1;
+            let suppressClick = false;
+            const srcOf = i => 'images/slides/slide-' + String(i).padStart(2, '0') + '.png';
+            const altOf = i => 'Slide ' + i + ' de ' + TOTAL + ' del deck del webinar de Haztuagencia';
+            const viewer = document.getElementById('deckViewer');
+            const img = document.getElementById('deckImg');
+            const lb = document.getElementById('deckLightbox');
+            const lbImg = document.getElementById('deckLbImg');
+            const numEl = document.getElementById('deckNum');
+            const lbNumEl = document.getElementById('deckLbNum');
+            if (!viewer || !img) return;
+
+            function show(i) {
+                cur = ((i - 1) % TOTAL + TOTAL) % TOTAL + 1;
+                img.src = srcOf(cur); img.alt = altOf(cur);
+                numEl.textContent = cur;
+                lbNumEl.textContent = cur;
+                if (!lb.hidden) { lbImg.src = srcOf(cur); lbImg.alt = altOf(cur); }
+                new Image().src = srcOf(cur === TOTAL ? 1 : cur + 1);
+                new Image().src = srcOf(cur === 1 ? TOTAL : cur - 1);
+            }
+
+            document.getElementById('deckPrev').addEventListener('click', () => show(cur - 1));
+            document.getElementById('deckNext').addEventListener('click', () => show(cur + 1));
+            document.getElementById('deckLbPrev').addEventListener('click', () => show(cur - 1));
+            document.getElementById('deckLbNext').addEventListener('click', () => show(cur + 1));
+
+            viewer.addEventListener('keydown', e => {
+                if (e.key === 'ArrowLeft') { e.preventDefault(); show(cur - 1); }
+                if (e.key === 'ArrowRight') { e.preventDefault(); show(cur + 1); }
+            });
+
+            function swipe(el) {
+                let x0 = null, y0 = null;
+                el.addEventListener('pointerdown', e => { x0 = e.clientX; y0 = e.clientY; });
+                el.addEventListener('pointerup', e => {
+                    if (x0 === null) return;
+                    const dx = e.clientX - x0, dy = e.clientY - y0;
+                    suppressClick = Math.abs(dx) > 10;
+                    if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) show(cur + (dx < 0 ? 1 : -1));
+                    x0 = y0 = null;
+                });
+            }
+            swipe(document.getElementById('deckStage'));
+            swipe(lb);
+
+            function openLb() { lb.hidden = false; lbImg.src = srcOf(cur); lbImg.alt = altOf(cur); document.body.style.overflow = 'hidden'; }
+            function closeLb() { lb.hidden = true; document.body.style.overflow = ''; }
+            document.getElementById('deckExpand').addEventListener('click', openLb);
+            img.addEventListener('click', () => { if (suppressClick) { suppressClick = false; return; } openLb(); });
+            document.getElementById('deckClose').addEventListener('click', closeLb);
+            lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+            document.addEventListener('keydown', e => {
+                if (lb.hidden) return;
+                if (e.key === 'Escape') closeLb();
+                if (e.key === 'ArrowLeft') show(cur - 1);
+                if (e.key === 'ArrowRight') show(cur + 1);
+            });
+        })();
     </script>
 
 </body>

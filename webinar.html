@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webinar gratis | Cómo crear una agencia que facture $10K al mes</title>
-    <meta name="description" content="Clase en vivo y gratis con Giuliano Cisneros. El modelo exacto para crear una agencia que facture $10K al mes vendiendo servicios. Cupos limitados.">
+    <title>Clase gratis | Cómo crear una agencia que facture $10K al mes</title>
+    <meta name="description" content="Clase gratis con Giuliano Cisneros. El modelo exacto para crear una agencia que facture $10K al mes vendiendo servicios. Reserva tu cupo para la próxima sesión.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -51,7 +51,8 @@
         .hero-meta-item .ic { color: var(--blue); }
 
         /* ===== COUNTDOWN ===== */
-        .countdown { display: flex; gap: 12px; margin: 26px 0 0; }
+        .cd-title { font-size: 13px; color: var(--gray-400); font-weight: 600; margin-top: 26px; }
+        .countdown { display: flex; gap: 12px; margin: 10px 0 0; }
         .cd-box { background: var(--card); border: 1px solid rgba(46, 145, 252, 0.2); border-radius: 12px; padding: 14px 0; text-align: center; min-width: 70px; flex: 1; }
         .cd-num { font-size: 28px; font-weight: 800; color: var(--blue); line-height: 1; }
         .cd-label { font-size: 11px; color: var(--gray-400); text-transform: uppercase; letter-spacing: 1px; margin-top: 6px; }
@@ -68,6 +69,17 @@
         .register-card .rc-note { font-size: 12px; color: var(--gray-600); margin-top: 14px; text-align: center; }
         .rc-seats { display: flex; align-items: center; gap: 8px; justify-content: center; margin-top: 14px; font-size: 13px; color: var(--gray-300); }
         .rc-seats strong { color: var(--blue); }
+        .rc-success { text-align: left; }
+        .rc-check { width: 48px; height: 48px; border-radius: 50%; background: var(--blue-soft); border: 1px solid rgba(46, 145, 252, 0.35); color: var(--blue); font-size: 22px; font-weight: 800; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
+        .rc-success h3 { font-size: 19px; font-weight: 800; margin-bottom: 6px; }
+        .rc-success-sub { font-size: 14px; color: var(--gray-400); margin-bottom: 12px; }
+        .rc-steps { margin: 0 0 4px 18px; display: flex; flex-direction: column; gap: 8px; }
+        .rc-steps li { font-size: 14px; color: var(--gray-300); line-height: 1.6; }
+
+        /* ===== PROOF STRIP ===== */
+        .proof-strip { border-top: 1px solid rgba(255,255,255,0.06); background: var(--surface); padding: 14px 0; }
+        .proof-strip-inner { display: flex; justify-content: center; align-items: center; gap: 14px; flex-wrap: wrap; font-size: 13px; color: var(--gray-400); font-weight: 600; text-align: center; }
+        .proof-strip-inner .dot { color: var(--blue); }
 
         /* ===== SECTIONS ===== */
         section.block { padding: 90px 0; }
@@ -146,14 +158,15 @@
     <div class="container">
         <div class="hero-grid">
             <div>
-                <div class="hero-badge"><span class="live-dot"></span> Clase en vivo y gratis</div>
+                <div class="hero-badge"><span class="live-dot"></span> Clase gratis · Próxima sesión abierta</div>
                 <h1>Cómo crear una agencia que facture <span class="highlight">$10K al mes</span> vendiendo servicios</h1>
-                <p class="sub">Una clase en vivo de 60 minutos donde te muestro el modelo completo, paso a paso. Sin teoría de relleno. El mismo sistema que aplicaron 300+ latinos en USA.</p>
+                <p class="sub">Una clase de 60 minutos donde te muestro el modelo completo, paso a paso. Sin teoría de relleno. El mismo sistema que aplicaron 300+ latinos en USA.</p>
                 <div class="hero-meta">
-                    <span class="hero-meta-item"><span class="ic">📅</span> Este jueves a las 7:00 PM (hora del Este)</span>
-                    <span class="hero-meta-item"><span class="ic">⏱️</span> 60 minutos en vivo</span>
+                    <span class="hero-meta-item"><span class="ic">📅</span> <span id="nextSession">Próxima sesión: jueves, 7:00 PM (hora del Este)</span></span>
+                    <span class="hero-meta-item"><span class="ic">⏱️</span> 60 minutos, directo al grano</span>
                     <span class="hero-meta-item"><span class="ic">🎁</span> Regalo solo para asistentes</span>
                 </div>
+                <div class="cd-title">La próxima sesión empieza en:</div>
                 <div class="countdown" id="countdown">
                     <div class="cd-box"><div class="cd-num" data-cd="days">00</div><div class="cd-label">Días</div></div>
                     <div class="cd-box"><div class="cd-num" data-cd="hours">00</div><div class="cd-label">Horas</div></div>
@@ -164,18 +177,37 @@
             <div class="register-card" id="registro">
                 <h2>Reserva tu cupo gratis</h2>
                 <p class="rc-sub">Te enviamos el enlace de acceso y los recordatorios al correo.</p>
-                <form onsubmit="event.preventDefault(); alert('Listo. Te llegará el enlace de acceso al correo. Revisa también spam.'); this.reset();">
-                    <input type="text" placeholder="Tu nombre" required>
+                <form id="regForm">
+                    <input type="text" id="regName" placeholder="Tu nombre" required>
                     <input type="email" placeholder="Tu mejor email" required>
                     <input type="tel" placeholder="WhatsApp (para recordatorios)">
                     <button type="submit">Reservar mi cupo gratis</button>
                 </form>
-                <div class="rc-seats"><span>🔥</span> Quedan <strong>37</strong> cupos para esta sesión</div>
+                <div class="rc-success" id="regSuccess" hidden>
+                    <div class="rc-check">✓</div>
+                    <h3 id="regSuccessTitle">Listo. Tu cupo está reservado.</h3>
+                    <p class="rc-success-sub">Esto es lo que pasa ahora:</p>
+                    <ol class="rc-steps">
+                        <li>Te llega el correo de confirmación con tu enlace de acceso. Revisa también spam.</li>
+                        <li>Te recordamos 24 horas antes y 1 hora antes de la sesión.</li>
+                        <li>Si no puedes llegar, te mandamos la repetición por tiempo limitado.</li>
+                    </ol>
+                </div>
+                <div class="rc-seats"><span>🔥</span> Los cupos de cada sesión son <strong>limitados</strong></div>
                 <p class="rc-note">Cero spam. Solo el acceso y los recordatorios del webinar.</p>
             </div>
         </div>
     </div>
 </section>
+
+<!-- ===== PROOF STRIP ===== -->
+<div class="proof-strip">
+    <div class="container">
+        <div class="proof-strip-inner">
+            <span>300+ alumnos entrenados</span><span class="dot">·</span><span>100+ con primer cliente en 1 a 3 meses</span><span class="dot">·</span><span>636K seguidores en TikTok</span>
+        </div>
+    </div>
+</div>
 
 <!-- ===== WHAT YOU'LL LEARN ===== -->
 <section class="block alt">
@@ -216,7 +248,7 @@
                 <div class="section-label">Tu instructor</div>
                 <h2>Giuliano Cisneros, <span>fundador de Haztuagencia</span></h2>
                 <p>Llevo más de 6 años vendiendo servicios a negocios. He facturado más de $70,000 en un mes desde mi casa. Y he entrenado a más de 300 latinos en USA para que hagan lo mismo.</p>
-                <p>Esta clase es lo que les enseño a mis alumnos en su primera semana. Gratis, en vivo, y con espacio para tus preguntas al final.</p>
+                <p>Esta clase es lo que les enseño a mis alumnos en su primera semana. Gratis, directa, y con espacio para tus preguntas al final.</p>
                 <ul class="host-credentials">
                     <li>6+ años vendiendo servicios a negocios</li>
                     <li>$70,000 facturados en un solo mes</li>
@@ -239,11 +271,11 @@
         <div class="faq-list">
             <div class="faq-item reveal">
                 <div class="faq-q"><span>¿De verdad es gratis?</span><span class="plus">+</span></div>
-                <div class="faq-a"><p>Sí. La clase es gratis y en vivo. Al final te explico cómo entrar a la mentoría si quieres acompañamiento, pero no es obligatorio. Sales con valor real así no compres nada.</p></div>
+                <div class="faq-a"><p>Sí. La clase es completamente gratis. Al final te explico cómo entrar a la mentoría si quieres acompañamiento, pero no es obligatorio. Sales con valor real así no compres nada.</p></div>
             </div>
             <div class="faq-item reveal">
-                <div class="faq-q"><span>¿Habrá repetición si no puedo asistir en vivo?</span><span class="plus">+</span></div>
-                <div class="faq-a"><p>Mandamos una repetición por tiempo limitado a los registrados. Pero lo bueno pasa en vivo: ahí respondo preguntas y doy el regalo solo para asistentes. Aparta el tiempo si puedes.</p></div>
+                <div class="faq-q"><span>¿Y si no puedo a esa hora?</span><span class="plus">+</span></div>
+                <div class="faq-a"><p>Reserva igual. Mandamos una repetición por tiempo limitado a los registrados, o tomas la siguiente sesión. Eso sí: el regalo es solo para los que asisten, así que aparta el tiempo si puedes.</p></div>
             </div>
             <div class="faq-item reveal">
                 <div class="faq-q"><span>No tengo experiencia. ¿Es para mí?</span><span class="plus">+</span></div>
@@ -261,7 +293,7 @@
 <section class="block final-cta">
     <div class="container reveal">
         <h2>El cupo es gratis, pero <span>limitado</span></h2>
-        <p>Reserva tu lugar ahora. Te mandamos el enlace de acceso y te recordamos antes de empezar.</p>
+        <p>Reserva tu lugar en la próxima sesión. Te mandamos el enlace de acceso y te recordamos antes de empezar.</p>
         <a href="#registro" class="hero-cta">Reservar mi cupo gratis</a>
     </div>
 </section>
@@ -279,13 +311,18 @@
 
     document.querySelectorAll('.faq-q').forEach(q => { q.addEventListener('click', () => q.parentElement.classList.toggle('open')); });
 
-    // Countdown: targets the next Thursday 7pm as a placeholder. Replace target date when scheduling.
+    // Countdown evergreen: siempre apunta a la próxima sesión (jueves 7:00 PM). Nunca caduca.
     (function() {
         const now = new Date();
         const target = new Date(now);
-        const daysUntilThu = ((4 - now.getDay()) + 7) % 7 || 7;
-        target.setDate(now.getDate() + daysUntilThu);
+        target.setDate(now.getDate() + ((4 - now.getDay()) + 7) % 7);
         target.setHours(19, 0, 0, 0);
+        if (target <= now) target.setDate(target.getDate() + 7);
+        const sessionEl = document.getElementById('nextSession');
+        if (sessionEl) {
+            const fecha = new Intl.DateTimeFormat('es-US', { weekday: 'long', day: 'numeric', month: 'long' }).format(target);
+            sessionEl.textContent = 'Próxima sesión: ' + fecha + ', 7:00 PM (hora del Este)';
+        }
         function tick() {
             const diff = Math.max(0, target - new Date());
             const d = Math.floor(diff / 86400000);
@@ -296,6 +333,19 @@
             set('days', d); set('hours', h); set('mins', m); set('secs', s);
         }
         tick(); setInterval(tick, 1000);
+    })();
+
+    // Registro: demo del flujo completo (sin backend). Muestra la confirmación in-card.
+    (function() {
+        const form = document.getElementById('regForm');
+        if (!form) return;
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = (document.getElementById('regName').value || '').trim().split(/\s+/)[0];
+            if (name) document.getElementById('regSuccessTitle').textContent = 'Listo, ' + name + '. Tu cupo está reservado.';
+            form.hidden = true;
+            document.getElementById('regSuccess').hidden = false;
+        });
     })();
 </script>
 
