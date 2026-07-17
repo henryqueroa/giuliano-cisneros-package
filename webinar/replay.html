@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Repetición de la clase | Haztuagencia</title>
+<meta name="description" content="La repetición de la clase gratuita de Haztuagencia, disponible por 48 horas.">
+<style>
+    :root { --dark: #0A0F1A; --panel: #161E2A; --blue: #2E91FC; --white: #ffffff; --gray: #94A3B8; --border: rgba(255,255,255,0.09); }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: var(--dark); color: var(--white); font-family: 'Manrope', system-ui, -apple-system, sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .container { max-width: 680px; margin: 0 auto; padding: 0 20px; }
+    .header { padding: 22px 0; border-bottom: 1px solid var(--border); text-align: center; }
+    .wordmark { font-weight: 800; letter-spacing: 3px; font-size: 15px; }
+    .wordmark span { color: var(--blue); }
+    .hero { padding: 40px 0 8px; text-align: center; }
+    .eyebrow { color: var(--blue); font-size: 12px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 14px; }
+    h1 { font-size: clamp(25px, 5.2vw, 36px); font-weight: 800; line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 12px; }
+    .sub { color: var(--gray); font-size: 16px; max-width: 540px; margin: 0 auto 16px; }
+    .countdown { display: flex; gap: 10px; justify-content: center; margin: 16px 0 6px; }
+    .cd-unit { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 10px 0; width: 78px; }
+    .cd-unit b { display: block; font-size: 24px; font-weight: 800; color: var(--blue); }
+    .cd-unit small { color: var(--gray); font-size: 11px; text-transform: uppercase; letter-spacing: 1px; }
+    .video-slot { aspect-ratio: 16 / 9; border: 1px dashed rgba(46,145,252,0.45); border-radius: 16px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; color: var(--gray); font-size: 14px; text-align: center; padding: 16px; margin: 24px 0; background: var(--panel); }
+    .video-slot b { color: var(--white); font-size: 16px; }
+    .claves { background: var(--panel); border: 1px solid var(--border); border-radius: 16px; padding: 24px; margin: 18px 0; }
+    .claves h2 { font-size: 19px; font-weight: 800; margin-bottom: 12px; }
+    .claves li { color: #C7D2E0; font-size: 15px; margin: 8px 0 8px 20px; }
+    .claves li b { color: var(--white); }
+    .offer { background: linear-gradient(135deg, rgba(46,145,252,0.16), rgba(46,145,252,0.05)); border: 1px solid rgba(46,145,252,0.35); border-radius: 16px; padding: 28px 26px; margin: 22px 0; text-align: center; }
+    .offer h2 { font-size: 21px; font-weight: 800; margin-bottom: 10px; }
+    .offer p { color: var(--gray); font-size: 15px; margin-bottom: 16px; }
+    .btn { display: inline-block; background: var(--blue); color: #fff; border: 0; border-radius: 10px; padding: 15px 28px; font-size: 16px; font-weight: 800; font-family: inherit; cursor: pointer; text-decoration: none; }
+    .btn:hover { filter: brightness(1.08); }
+    .offer .note { font-size: 12px; color: var(--gray); margin-top: 12px; margin-bottom: 0; }
+    .bono-note { border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; margin: 18px 0; color: var(--gray); font-size: 14px; background: var(--panel); }
+    .bono-note b { color: var(--white); }
+    .faq { margin: 28px 0 8px; }
+    .faq h2 { font-size: 21px; font-weight: 800; text-align: center; margin-bottom: 16px; }
+    .faq-item { border: 1px solid var(--border); border-radius: 12px; margin-bottom: 10px; background: var(--panel); }
+    .faq-q { display: flex; justify-content: space-between; align-items: center; padding: 15px 18px; cursor: pointer; font-weight: 700; font-size: 15px; }
+    .faq-q .plus { color: var(--blue); font-size: 18px; }
+    .faq-a { display: none; padding: 0 18px 15px; color: var(--gray); font-size: 14px; }
+    .faq-item.open .faq-a { display: block; }
+    .footer { border-top: 1px solid var(--border); margin-top: 36px; padding: 22px 0 34px; text-align: center; color: var(--gray); font-size: 12px; }
+</style>
+</head>
+<body>
+
+<header class="header"><div class="wordmark">HAZTUAGENCIA<span>.</span></div></header>
+
+<main class="container">
+
+    <section class="hero">
+        <div class="eyebrow">Repetición disponible solo 48 horas</div>
+        <h1>Te perdiste la clase en vivo. Esta es tu ventana.</h1>
+        <p class="sub">La repetición queda disponible 48 horas desde que abres esta página. Cuando el contador llega a cero, se va.</p>
+        <div class="countdown">
+            <div class="cd-unit"><b data-cd="hours">48</b><small>horas</small></div>
+            <div class="cd-unit"><b data-cd="mins">00</b><small>min</small></div>
+            <div class="cd-unit"><b data-cd="secs">00</b><small>seg</small></div>
+        </div>
+    </section>
+
+    <div class="video-slot"><b>Aquí va la repetición de la clase</b><span>(embed del video al grabar la primera sesión en vivo)</span></div>
+
+    <section class="claves">
+        <h2>Lo que viste (o te perdiste) en la clase</h2>
+        <ul>
+            <li><b>Qué servicio vender primero.</b> Las 3 reglas para elegir el que el mercado ya está pagando.</li>
+            <li><b>Cómo cerrar sin sonar a vendedor.</b> El script de la primera llamada, paso a paso.</li>
+            <li><b>De dónde salen tus primeros clientes.</b> Sin audiencia, sin ads y sin contenido viral.</li>
+        </ul>
+    </section>
+
+    <section class="offer">
+        <h2>El siguiente paso</h2>
+        <p>Si la clase te hizo sentido y quieres acompañamiento para construir tu agencia, aplica a una llamada con el equipo. Los detalles y el precio de la mentoría se explican ahí.</p>
+        <a class="btn" href="https://www.haztuagencia.com/mentoria" target="_blank" rel="noopener">Aplicar a una llamada</a>
+        <p class="note">Demo: el botón apunta a tu página actual de agenda. Al lanzar, se conecta al booking del funnel.</p>
+    </section>
+
+    <div class="bono-note"><b>Sobre el regalo de la clase en vivo:</b> la sesión de bienvenida 1 a 1 y la auditoría de tu primer pitch son solo para los que asisten en vivo. No están en la repetición. Si quieres ese bono, reserva la próxima sesión.</div>
+
+    <section class="faq">
+        <h2>Lo que seguramente te estás preguntando</h2>
+        <div class="faq-item">
+            <div class="faq-q"><span>¿Cuánto cuesta la mentoría?</span><span class="plus">+</span></div>
+            <div class="faq-a"><p>La clase es gratis. El precio de la mentoría se explica en la llamada, porque depende del acompañamiento que necesitas. No entra cualquiera: entra el que va a aplicar lo que aprende.</p></div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q"><span>¿Y si no tengo tiempo?</span><span class="plus">+</span></div>
+            <div class="faq-a"><p>El modelo está diseñado para entregarse en menos de 2 horas al día. La primera venta no es para volverte experto: es para validar que cierras.</p></div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q"><span>No tengo experiencia. ¿Aplico igual?</span><span class="plus">+</span></div>
+            <div class="faq-a"><p>Sí. El modelo está pensado para el que empieza de cero. Más de 100 estudiantes cerraron su primer cliente en 1 a 3 meses.</p></div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q"><span>¿Funciona desde cualquier país?</span><span class="plus">+</span></div>
+            <div class="faq-a"><p>Sí. Solo necesitas conexión a internet. La comunidad está pensada para latinos en USA y LATAM.</p></div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q"><span>¿Por qué solo 48 horas?</span><span class="plus">+</span></div>
+            <div class="faq-a"><p>Porque la gente que avanza es la que decide rápido. La ventana es real: cuando el contador llega a cero, la repetición se baja.</p></div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer"><div class="container">&copy; 2026 Haztuagencia, por Giuliano Cisneros. Todos los derechos reservados.</div></footer>
+
+<script>
+    document.querySelectorAll('.faq-q').forEach(q => { q.addEventListener('click', () => q.parentElement.classList.toggle('open')); });
+
+    // Ventana de 48h por visitante: arranca en la primera visita (localStorage), patrón replay evergreen.
+    // Al lanzar de verdad: fijar REPLAY_START a un ISO (el deadline debe coincidir con el email 5).
+    (function() {
+        const REPLAY_START = null;
+        let start = REPLAY_START ? new Date(REPLAY_START).getTime() : null;
+        if (!start) {
+            start = parseInt(localStorage.getItem('hta-replay-start'), 10);
+            if (!start || isNaN(start)) { start = Date.now(); localStorage.setItem('hta-replay-start', String(start)); }
+        }
+        const end = start + 48 * 3600 * 1000;
+        function tick() {
+            const diff = Math.max(0, end - Date.now());
+            const set = (k, v) => { const el = document.querySelector('[data-cd="'+k+'"]'); if (el) el.textContent = String(v).padStart(2, '0'); };
+            set('hours', Math.floor(diff / 3600000));
+            set('mins', Math.floor((diff % 3600000) / 60000));
+            set('secs', Math.floor((diff % 60000) / 1000));
+        }
+        tick(); setInterval(tick, 1000);
+    })();
+</script>
+
+</body>
+</html>

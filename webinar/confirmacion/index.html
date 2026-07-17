@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tu cupo está asegurado | Haztuagencia</title>
+<meta name="description" content="Confirmación de tu cupo para la clase gratuita de Haztuagencia. Sigue estos pasos para no perderte nada.">
+<style>
+    :root { --dark: #0A0F1A; --panel: #161E2A; --blue: #2E91FC; --white: #ffffff; --gray: #94A3B8; --border: rgba(255,255,255,0.09); }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: var(--dark); color: var(--white); font-family: 'Manrope', system-ui, -apple-system, sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .container { max-width: 680px; margin: 0 auto; padding: 0 20px; }
+    .header { padding: 22px 0; border-bottom: 1px solid var(--border); text-align: center; }
+    .wordmark { font-weight: 800; letter-spacing: 3px; font-size: 15px; }
+    .wordmark span { color: var(--blue); }
+    .hero { padding: 40px 0 10px; text-align: center; }
+    .check { width: 56px; height: 56px; border-radius: 50%; background: var(--blue); color: #fff; font-size: 28px; font-weight: 800; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
+    h1 { font-size: clamp(24px, 5vw, 34px); font-weight: 800; letter-spacing: -0.5px; margin-bottom: 10px; }
+    .sub { color: var(--gray); font-size: 15px; }
+    .step { background: var(--panel); border: 1px solid var(--border); border-radius: 16px; padding: 24px; margin: 18px 0; }
+    .step-tag { color: var(--blue); font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px; }
+    .step h2 { font-size: 19px; font-weight: 800; margin-bottom: 8px; }
+    .step p { color: var(--gray); font-size: 14px; margin-bottom: 12px; }
+    .video-slot { aspect-ratio: 16 / 9; border: 1px dashed rgba(46,145,252,0.45); border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; color: var(--gray); font-size: 13px; text-align: center; padding: 12px; }
+    .video-slot b { color: var(--white); font-size: 15px; }
+    select, input[type="text"], input[type="tel"] { width: 100%; background: var(--dark); border: 1px solid var(--border); border-radius: 10px; color: var(--white); padding: 12px 13px; font-size: 14px; font-family: inherit; margin-bottom: 10px; }
+    select:focus, input:focus { outline: none; border-color: var(--blue); }
+    .btn { display: inline-block; background: var(--blue); color: #fff; border: 0; border-radius: 10px; padding: 12px 22px; font-size: 14px; font-weight: 800; font-family: inherit; cursor: pointer; text-decoration: none; }
+    .btn:hover { filter: brightness(1.08); }
+    .ok { color: var(--blue); font-weight: 700; font-size: 14px; margin-top: 8px; display: none; }
+    .subject-box { background: var(--dark); border: 1px solid var(--blue); border-radius: 10px; padding: 12px 16px; font-weight: 700; font-size: 14px; }
+    .warm-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .proof-card { background: var(--dark); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+    .proof-thumb { position: relative; aspect-ratio: 16 / 9; background: #000; cursor: pointer; }
+    .proof-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; opacity: 0.85; }
+    .proof-thumb:hover img { opacity: 1; }
+    .proof-thumb .play { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 38px; height: 38px; border-radius: 50%; background: var(--blue); display: flex; align-items: center; justify-content: center; }
+    .proof-thumb .play::after { content: ''; border-style: solid; border-width: 6px 0 6px 10px; border-color: transparent transparent transparent #fff; margin-left: 2px; }
+    .proof-thumb .dur { position: absolute; bottom: 6px; right: 6px; background: rgba(6,7,10,0.75); color: #fff; font-size: 10px; padding: 2px 6px; border-radius: 5px; }
+    .proof-thumb iframe { width: 100%; height: 100%; border: 0; display: block; }
+    .proof-meta { padding: 8px 10px 10px; }
+    .proof-meta b { display: block; font-size: 12px; }
+    .proof-meta small { color: var(--gray); font-size: 11px; }
+    .urgency { background: linear-gradient(135deg, rgba(46,145,252,0.16), rgba(46,145,252,0.05)); border: 1px solid rgba(46,145,252,0.35); border-radius: 16px; padding: 22px 24px; margin: 22px 0; text-align: center; }
+    .urgency b { display: block; font-size: 17px; margin-bottom: 6px; }
+    .urgency p { color: var(--gray); font-size: 14px; }
+    .footer { border-top: 1px solid var(--border); margin-top: 36px; padding: 22px 0 34px; text-align: center; color: var(--gray); font-size: 12px; }
+    @media (max-width: 560px) { .warm-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<header class="header"><div class="wordmark">HAZTUAGENCIA<span>.</span></div></header>
+
+<main class="container">
+
+    <section class="hero">
+        <div class="check">✓</div>
+        <h1>Tu cupo está asegurado</h1>
+        <p class="sub" id="confirmSub">Clase gratuita · Próxima sesión: jueves, 7:00 PM (hora del Este) · 60 minutos con preguntas al final</p>
+    </section>
+
+    <!-- PASO 1: VIDEO DE BIENVENIDA -->
+    <section class="step">
+        <div class="step-tag">Paso 1</div>
+        <h2>Un mensaje de Giuliano</h2>
+        <p>Mira este video corto antes de la clase.</p>
+        <div class="video-slot"><b>Video de bienvenida de Giuliano</b><span>(60 a 120 segundos, por grabar: quién eres, qué van a ver y por qué quedarse hasta el final)</span></div>
+    </section>
+
+    <!-- PASO 2: ENCUESTA -->
+    <section class="step">
+        <div class="step-tag">Paso 2</div>
+        <h2>Cuéntanos de ti (30 segundos)</h2>
+        <p>Tus respuestas le sirven a Giuliano para preparar el espacio de preguntas.</p>
+        <form id="surveyForm">
+            <select id="s1" required>
+                <option value="" disabled selected>¿Cuál es tu reto #1 ahora mismo?</option>
+                <option>Todavía no cierro mi primer cliente</option>
+                <option>No sé qué servicio vender</option>
+                <option>Me cuesta conseguir prospectos</option>
+                <option>Cierro poco y no sé por qué</option>
+            </select>
+            <input type="text" id="s2" placeholder="¿Qué te gustaría lograr en 90 días? Escríbelo con tus palabras">
+            <button type="submit" class="btn">Enviar</button>
+            <div class="ok" id="surveyOk">¡Gracias! Giuliano lo tendrá en cuenta para el espacio de preguntas.</div>
+        </form>
+    </section>
+
+    <!-- PASO 3: CALENDARIO -->
+    <section class="step">
+        <div class="step-tag">Paso 3</div>
+        <h2>Agenda la clase en tu calendario</h2>
+        <p>Un click y queda bloqueada la hora, con recordatorio 30 minutos antes.</p>
+        <a class="btn" id="icsBtn" download="clase-haztuagencia.ics" href="#">Agregar a mi calendario</a>
+    </section>
+
+    <!-- PASO 4: WHITELIST -->
+    <section class="step">
+        <div class="step-tag">Paso 4</div>
+        <h2>Que el link no se te pierda</h2>
+        <p>El día de la clase te llega un correo con este asunto. Búscalo así:</p>
+        <div class="subject-box">HOY: tu link de acceso a la clase</div>
+        <p style="margin-top:12px; margin-bottom:0;">Y agrega nuestro correo a tus contactos para que no caiga en promociones.</p>
+    </section>
+
+    <!-- PASO 5: WHATSAPP -->
+    <section class="step">
+        <div class="step-tag">Paso 5 (opcional)</div>
+        <h2>¿Te avisamos por WhatsApp?</h2>
+        <p>Un recordatorio el día antes y otro justo cuando empecemos. Nada más.</p>
+        <form id="smsForm">
+            <input type="tel" id="phone" placeholder="Tu WhatsApp (con código de país): +1 305 ..." required>
+            <button type="submit" class="btn">Avisarme por WhatsApp</button>
+            <div class="ok" id="smsOk">Listo, te avisamos antes de empezar.</div>
+        </form>
+    </section>
+
+    <!-- CONTENIDO PARA CALENTAR -->
+    <section class="step">
+        <div class="step-tag">Mientras llega tu sesión</div>
+        <h2>Alumnos reales, con su cara y su voz</h2>
+        <p>Historias de gente que empezó exactamente donde estás tú.</p>
+        <div class="warm-grid">
+            <div class="proof-card">
+                <div class="proof-thumb" data-wistia="fz70sl91cc" role="button" tabindex="0" aria-label="Ver la historia de Willy">
+                    <img src="https://embed-ssl.wistia.com/deliveries/dfd94681ba7cef0eee48d9f56b1db9fe5bb83f15.jpg?image_crop_resized=640x360" alt="La historia de Willy" loading="lazy">
+                    <span class="play"></span><span class="dur">1:08</span>
+                </div>
+                <div class="proof-meta"><b>Willy</b><small>Creó su agencia a los 19</small></div>
+            </div>
+            <div class="proof-card">
+                <div class="proof-thumb" data-wistia="miewzr15f8" role="button" tabindex="0" aria-label="Ver el testimonio de Jerónimo Vallejo">
+                    <img src="https://embed-ssl.wistia.com/deliveries/960f724773d06bd10e9e803b80129f4076c56a2d.jpg?image_crop_resized=640x360" alt="Testimonio de Jerónimo Vallejo" loading="lazy">
+                    <span class="play"></span><span class="dur">3:45</span>
+                </div>
+                <div class="proof-meta"><b>Jerónimo Vallejo</b><small>$8,000 al mes</small></div>
+            </div>
+            <div class="proof-card">
+                <div class="proof-thumb" data-wistia="j80uvrnrz2" role="button" tabindex="0" aria-label="Ver el testimonio de Leonardo Chavez">
+                    <img src="https://embed-ssl.wistia.com/deliveries/034bfc18cbab8e8f60bac852274b874dbede28e7.jpg?image_crop_resized=640x360" alt="Testimonio de Leonardo Chavez" loading="lazy">
+                    <span class="play"></span><span class="dur">2:05</span>
+                </div>
+                <div class="proof-meta"><b>Leonardo Chavez</b><small>$6,000 al mes</small></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROOF + URGENCIA -->
+    <section class="urgency">
+        <b>350+ latinos ya construyeron su negocio con este modelo</b>
+        <p>En la clase te mostramos qué hicieron distinto. En vivo, con espacio de preguntas. El regalo del final es solo para los que están conectados.</p>
+    </section>
+
+</main>
+
+<footer class="footer"><div class="container">&copy; 2026 Haztuagencia, por Giuliano Cisneros. Todos los derechos reservados.</div></footer>
+
+<script>
+    // Próxima sesión evergreen (jueves 7:00 PM ET) compartida por subtítulo e .ics
+    function nextSession() {
+        const now = new Date();
+        const t = new Date(now);
+        t.setDate(now.getDate() + ((4 - now.getDay()) + 7) % 7);
+        t.setHours(19, 0, 0, 0);
+        if (t <= now) t.setDate(t.getDate() + 7);
+        return t;
+    }
+    (function() {
+        const t = nextSession();
+        const fecha = new Intl.DateTimeFormat('es-US', { weekday: 'long', day: 'numeric', month: 'long' }).format(t);
+        document.getElementById('confirmSub').textContent = 'Clase gratuita · ' + fecha + ', 7:00 PM (hora del Este) · 60 minutos con preguntas al final';
+    })();
+
+    // Encuesta (demo, sin backend)
+    document.getElementById('surveyForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        document.getElementById('surveyOk').style.display = 'block';
+        this.querySelector('button').disabled = true;
+    });
+
+    // WhatsApp: el teléfono se pide AQUÍ, no en el registro (canon de show-rate)
+    document.getElementById('smsForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        document.getElementById('smsOk').style.display = 'block';
+        this.querySelector('button').disabled = true;
+    });
+
+    // .ics dinámico: próxima sesión, 1 hora, alarma 30 min antes. 7 PM ET = 23:00 UTC (EDT).
+    (function() {
+        const t = nextSession();
+        const pad = n => String(n).padStart(2, '0');
+        const day = t.getFullYear().toString() + pad(t.getMonth() + 1) + pad(t.getDate());
+        const start = day + 'T230000Z';
+        const endIso = new Date(Date.UTC(t.getFullYear(), t.getMonth(), t.getDate(), 23, 0, 0) + 3600000);
+        const endStr = endIso.getUTCFullYear().toString() + pad(endIso.getUTCMonth() + 1) + pad(endIso.getUTCDate()) + 'T' + pad(endIso.getUTCHours()) + pad(endIso.getUTCMinutes()) + '00Z';
+        const ics = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Haztuagencia//Clase//ES', 'BEGIN:VEVENT',
+            'UID:clase-' + day + '@haztuagencia.com',
+            'DTSTART:' + start, 'DTEND:' + endStr,
+            'SUMMARY:Clase gratuita Haztuagencia con Giuliano Cisneros',
+            'DESCRIPTION:El modelo para crear una agencia que facture $10\\,000 al mes vendiendo servicios. El link de acceso llega por correo.',
+            'BEGIN:VALARM', 'TRIGGER:-PT30M', 'ACTION:DISPLAY', 'DESCRIPTION:La clase de Haztuagencia empieza en 30 minutos', 'END:VALARM',
+            'END:VEVENT', 'END:VCALENDAR'].join('\r\n');
+        document.getElementById('icsBtn').href = 'data:text/calendar;charset=utf-8,' + encodeURIComponent(ics);
+    })();
+
+    // Testimonios: facade click-to-load de Wistia
+    document.querySelectorAll('.proof-thumb[data-wistia]').forEach(function(t) {
+        function loadVideo() {
+            if (t.classList.contains('loaded')) return;
+            t.innerHTML = '<iframe src="https://fast.wistia.net/embed/iframe/' + t.getAttribute('data-wistia') + '?videoFoam=true&autoPlay=true" allow="autoplay; fullscreen" allowfullscreen title="Testimonio en video"></iframe>';
+            t.classList.add('loaded');
+        }
+        t.addEventListener('click', loadVideo);
+        t.addEventListener('keydown', function(e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); loadVideo(); } });
+    });
+</script>
+
+</body>
+</html>

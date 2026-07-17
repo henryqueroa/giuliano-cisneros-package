@@ -169,6 +169,10 @@
         .vsl-play svg { width: 34px; height: 34px; fill: var(--blue); margin-left: 5px; }
         .vsl-frame:hover .vsl-play { transform: scale(1.05); background: rgba(46, 145, 252, 0.28); }
         .vsl-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; z-index: 2; }
+        .vsl-frame[data-wistia] { cursor: pointer; }
+        .vsl-frame .vsl-thumb { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.55; transition: opacity 0.3s; }
+        .vsl-frame:hover .vsl-thumb { opacity: 0.7; }
+        .vsl-dur { position: relative; z-index: 1; color: var(--gray-300); font-size: 13px; font-weight: 600; letter-spacing: 0.03em; }
         .vsl-caption { margin-top: 14px; font-size: 13px; color: var(--gray-400); letter-spacing: 0.04em; text-transform: uppercase; font-weight: 600; text-align: center; }
         .vsl-label { font-weight: 600; font-size: 16px; color: var(--white); position: relative; z-index: 1; margin-bottom: 6px; padding: 0 16px; text-align: center; }
         .vsl-sub { font-size: 12px; color: var(--gray-400); letter-spacing: 0.08em; text-transform: uppercase; position: relative; z-index: 1; }
@@ -227,6 +231,16 @@
         .proof-card .author { font-size: 14px; font-weight: 700; color: var(--blue); }
         .proof-card .role { font-size: 13px; color: var(--gray-400); }
         .proof-note { text-align: center; margin-top: 28px; font-size: 13px; color: var(--gray-600); font-style: italic; }
+        .proof-card.video { padding: 0; overflow: hidden; }
+        .proof-card.video .proof-body { padding: 20px 24px 24px; }
+        .proof-thumb { position: relative; aspect-ratio: 16 / 9; background: #000; cursor: pointer; }
+        .proof-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; opacity: 0.85; transition: opacity 0.3s; }
+        .proof-thumb:hover img { opacity: 1; }
+        .proof-thumb .play { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 56px; height: 56px; border-radius: 50%; background: var(--blue); display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(46,145,252,0.45); transition: transform 0.2s; }
+        .proof-thumb:hover .play { transform: translate(-50%, -50%) scale(1.08); }
+        .proof-thumb .play::after { content: ''; border-style: solid; border-width: 9px 0 9px 15px; border-color: transparent transparent transparent #fff; margin-left: 3px; }
+        .proof-thumb .dur { position: absolute; bottom: 10px; right: 10px; background: rgba(6,7,10,0.75); color: #fff; font-size: 12px; padding: 3px 8px; border-radius: 6px; }
+        .proof-thumb iframe { width: 100%; height: 100%; border: 0; display: block; }
 
         /* ========== LEAD MAGNET ========== */
         .lead-magnet-box { background: linear-gradient(135deg, var(--surface) 0%, var(--card) 100%); border: 1px solid rgba(46, 145, 252, 0.18); border-radius: 20px; padding: 56px 40px; text-align: center; margin-top: 8px; }
@@ -352,8 +366,10 @@
             <span class="hero-chip"><strong>6 años</strong> vendiendo servicios</span>
         </div>
         <div class="vsl-wrap reveal">
-            <div class="vsl-frame">
-                <iframe src="https://www.youtube.com/embed/gzDSQhU4Nks?rel=0&modestbranding=1" title="Entrenamiento Haztuagencia — Giuliano Cisneros" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="vsl-frame" data-wistia="s69z25n2jq" role="button" tabindex="0" aria-label="Reproducir el entrenamiento de Haztuagencia">
+                <img class="vsl-thumb" src="https://embed-ssl.wistia.com/deliveries/34197059b3c88f958e51a31df3b3643c2766b21c.jpg?image_crop_resized=1280x720" alt="Entrenamiento de Haztuagencia con Giuliano Cisneros" loading="eager">
+                <div class="vsl-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+                <span class="vsl-dur">El entrenamiento completo · 18 minutos</span>
             </div>
             <div class="vsl-caption">Paso 1: activa el sonido y mira el video. Paso 2: agenda tu llamada.</div>
         </div>
@@ -434,23 +450,38 @@
             <p class="section-subtitle">Más de 100 estudiantes cerraron su primer cliente en 1 a 3 meses. Una muestra de cómo lo lograron.</p>
         </div>
         <div class="proof-grid">
-            <div class="proof-card reveal">
-                <p class="quote">$15,000 al mes vendiendo servicios a negocios. Su testimonio completo está grabado en video, con cara, voz e historia.</p>
-                <div class="author">Rubén Hernández</div>
-                <div class="role">Alumno · Testimonio en video</div>
+            <div class="proof-card video reveal">
+                <div class="proof-thumb" data-wistia="3yx6dmm1ok" role="button" tabindex="0" aria-label="Ver el testimonio en video de Rubén Hernández">
+                    <img src="https://embed-ssl.wistia.com/deliveries/a4c827b876f2194f8cb032cb9d00812ee5bde112.jpg?image_crop_resized=640x360" alt="Testimonio en video de Rubén Hernández" loading="lazy">
+                    <span class="play"></span><span class="dur">2:03</span>
+                </div>
+                <div class="proof-body">
+                    <div class="author">Rubén Hernández</div>
+                    <div class="role">$15,000 al mes · Testimonio en video</div>
+                </div>
             </div>
-            <div class="proof-card reveal">
-                <p class="quote">$10,800 al mes con el modelo Haztuagencia. Testimonio grabado en video y publicado en el funnel de la mentoría.</p>
-                <div class="author">Juan Pablo Vallejo</div>
-                <div class="role">Alumno · Testimonio en video</div>
+            <div class="proof-card video reveal">
+                <div class="proof-thumb" data-wistia="engb0x9bgb" role="button" tabindex="0" aria-label="Ver el testimonio en video de Juan Pablo Vallejo">
+                    <img src="https://embed-ssl.wistia.com/deliveries/defb54c016d2da5e338c131bd388e3fab8731593.jpg?image_crop_resized=640x360" alt="Testimonio en video de Juan Pablo Vallejo" loading="lazy">
+                    <span class="play"></span><span class="dur">3:36</span>
+                </div>
+                <div class="proof-body">
+                    <div class="author">Juan Pablo Vallejo</div>
+                    <div class="role">$10,800 al mes · Testimonio en video</div>
+                </div>
             </div>
-            <div class="proof-card reveal">
-                <p class="quote">$9,000 al mes vendiendo servicios a negocios. Su testimonio en video ya existe: solo falta ponerlo a trabajar en público.</p>
-                <div class="author">Dayanne Rojas</div>
-                <div class="role">Alumna · Testimonio en video</div>
+            <div class="proof-card video reveal">
+                <div class="proof-thumb" data-wistia="lzuph6alnh" role="button" tabindex="0" aria-label="Ver el testimonio en video de Dayanne Rojas">
+                    <img src="https://embed-ssl.wistia.com/deliveries/f61b058e840ba3349e358ffa038a677f595aa23c.jpg?image_crop_resized=640x360" alt="Testimonio en video de Dayanne Rojas" loading="lazy">
+                    <span class="play"></span><span class="dur">3:39</span>
+                </div>
+                <div class="proof-body">
+                    <div class="author">Dayanne Rojas</div>
+                    <div class="role">$9,000 al mes · Testimonio en video</div>
+                </div>
             </div>
         </div>
-        <p class="proof-note">Los 6 casos son reales y ya están grabados en video por Haztuagencia: Rubén Hernández ($15,000/mes), Juan Pablo Vallejo ($10,800/mes), Dayanne Rojas ($9,000/mes), Jerónimo Vallejo ($8,000/mes), Leonardo Chavez ($6,000/mes) y David Quinonez ($3,250/mes), más la historia de Willy. Hoy viven detrás del formulario de registro. Esta galería los muestra trabajando en público. Resultados no típicos.</p>
+        <p class="proof-note">Los videos son los testimonios reales publicados por Haztuagencia, reproducidos aquí tal cual. El resto de la galería ya está grabada: Jerónimo Vallejo ($8,000/mes), Leonardo Chavez ($6,000/mes), David Quinonez ($3,250/mes) y la historia de Willy. Resultados no típicos.</p>
     </div>
 </section>
 
@@ -610,6 +641,18 @@
         });
     }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Testimonios + VSL: facade click-to-load de Wistia (no carga players hasta el click)
+    document.querySelectorAll('.proof-thumb[data-wistia], .vsl-frame[data-wistia]').forEach(function(t) {
+        function loadVideo() {
+            if (t.classList.contains('loaded')) return;
+            var id = t.getAttribute('data-wistia');
+            t.innerHTML = '<iframe src="https://fast.wistia.net/embed/iframe/' + id + '?videoFoam=true&autoPlay=true" allow="autoplay; fullscreen" allowfullscreen title="Testimonio en video"></iframe>';
+            t.classList.add('loaded');
+        }
+        t.addEventListener('click', loadVideo);
+        t.addEventListener('keydown', function(e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); loadVideo(); } });
+    });
 
     document.querySelectorAll('.faq-q').forEach(q => {
         q.addEventListener('click', () => q.parentElement.classList.toggle('open'));
